@@ -1,0 +1,111 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --bg-primary: #F5F2EA;
+    --bg-secondary: #EBE6DA;
+    --bg-surface: #FFFFFF;
+    --bg-elevated: #F9F7F2;
+    --text-primary: #080D18;
+    --text-secondary: #4A5568;
+    --text-muted: #6E7A8E;
+    --border-subtle: rgba(8, 13, 24, 0.09);
+    --border-gold: rgba(179, 147, 82, 0.35);
+    --accent-gold: #B39352;
+  }
+
+  .dark {
+    --bg-primary: #080D18;
+    --bg-secondary: #0D1423;
+    --bg-surface: #141D2D;
+    --bg-elevated: #1B273D;
+    --text-primary: #F5F2EA;
+    --text-secondary: #C4CBD8;
+    --text-muted: #929DB0;
+    --border-subtle: rgba(245, 242, 234, 0.08);
+    --border-gold: rgba(214, 184, 120, 0.28);
+    --accent-gold: #D6B878;
+  }
+
+  html {
+    font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+    scroll-behavior: smooth;
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+  }
+
+  body {
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+    transition: background-color 0.25s ease, color 0.25s ease;
+    overflow-x: hidden;
+  }
+}
+
+/* Tabular numerals for all financial numbers */
+.tabular-nums {
+  font-variant-numeric: tabular-nums;
+  font-feature-settings: "tnum" 1, "zero" 1;
+}
+
+/* Subtle architectural grid overlay */
+.bg-architectural-grid {
+  background-size: 48px 48px;
+  background-image: 
+    linear-gradient(to right, rgba(214, 184, 120, 0.04) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(214, 184, 120, 0.04) 1px, transparent 1px);
+}
+
+.light .bg-architectural-grid {
+  background-image: 
+    linear-gradient(to right, rgba(8, 13, 24, 0.04) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(8, 13, 24, 0.04) 1px, transparent 1px);
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(146, 157, 176, 0.25);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(214, 184, 120, 0.45);
+}
+
+/* 3D card perspective utilities */
+.perspective-1000 {
+  perspective: 1200px;
+}
+
+.preserve-3d {
+  transform-style: preserve-3d;
+}
+
+.backface-hidden {
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+
+.rotate-y-180 {
+  transform: rotateY(180deg);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, ::before, ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
