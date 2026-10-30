@@ -418,14 +418,14 @@ export const DashboardTransfersPage: React.FC = () => {
             </div>
           </div>
 
-          <div className="p-5 rounded-2xl bg-[#0D1423] text-[#F5F2EA] border border-[#D6B878]/30 flex items-center justify-between">
+          <div className="p-5 rounded-2xl bg-gradient-to-br from-[#FFFFFF] via-[#FDFBF7] to-[#F5EFE4] dark:bg-[#0D1423] text-[#0A0F1A] dark:text-[#F5F2EA] border border-[#D6B878]/35 dark:border-[#D6B878]/30 shadow-luxury-light dark:shadow-none flex items-center justify-between">
             <div>
-              <span className="text-xs text-[#929DB0] block">Simulated Settlement Amount</span>
-              <span className="text-xs text-[#D6B878]">
+              <span className="text-xs text-[#6B778D] dark:text-[#929DB0] block">Simulated Settlement Amount</span>
+              <span className="text-xs text-[#9E7B35] dark:text-[#D6B878]">
                 Memo: {description || 'Simulated transfer'}
               </span>
             </div>
-            <span className="font-mono text-2xl sm:text-3xl font-semibold text-[#D6B878] tabular-nums">
+            <span className="font-mono text-2xl sm:text-3xl font-semibold text-[#9E7B35] dark:text-[#D6B878] tabular-nums">
               ${numericAmount.toLocaleString('en-US', { minimumFractionDigits: 2 })} USD
             </span>
           </div>

@@ -82,8 +82,8 @@ export const DashboardCardsPage: React.FC = () => {
               onClick={() => setSelectedCardIdx(idx)}
               className={`p-4 rounded-2xl border text-left transition-all flex flex-col justify-between ${
                 isSelected
-                  ? 'bg-[#0D1423] text-[#F5F2EA] border-[#D6B878] shadow-md'
-                  : 'bg-white dark:bg-[#141D2D] border-[#080D18]/10 dark:border-[#F5F2EA]/10 opacity-80 hover:opacity-100'
+                  ? 'bg-gradient-to-br from-[#FFFFFF] via-[#FDFBF7] to-[#F5EFE4] text-[#0A0F1A] border-[#D6B878] shadow-luxury-light ring-1 ring-[#D6B878]/40 dark:ring-0 dark:bg-[#0D1423] dark:text-[#F5F2EA] dark:border-[#D6B878] dark:shadow-md'
+                  : 'bg-white dark:bg-[#141D2D] border-[#0A0F1A]/10 dark:border-[#F5F2EA]/10 opacity-80 hover:opacity-100 shadow-sm dark:shadow-none'
               }`}
             >
               <div className="flex items-center justify-between">
