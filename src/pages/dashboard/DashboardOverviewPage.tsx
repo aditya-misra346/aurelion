@@ -180,9 +180,9 @@ export const DashboardOverviewPage: React.FC = () => {
       {/* Primary KPI Strip with Visual Sparklines & Radial Gauge */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4">
         {/* Total Available Liquidity */}
-        <div className="sm:col-span-2 lg:col-span-2 rounded-2xl p-6 bg-[#0D1423] text-[#F5F2EA] border border-[#D6B878]/35 shadow-luxury flex items-center justify-between gap-4">
+        <div className="sm:col-span-2 lg:col-span-2 rounded-2xl p-6 bg-gradient-to-br from-[#FFFFFF] via-[#FDFBF7] to-[#F5EFE4] dark:bg-[#0D1423] text-[#0A0F1A] dark:text-[#F5F2EA] border border-[#D6B878]/40 dark:border-[#D6B878]/35 shadow-luxury-light dark:shadow-luxury flex items-center justify-between gap-4">
           <div className="space-y-2">
-            <span className="text-xs font-mono uppercase tracking-[0.18em] text-[#D6B878] inline-flex items-center">
+            <span className="text-xs font-mono uppercase tracking-[0.18em] text-[#9E7B35] dark:text-[#D6B878] inline-flex items-center">
               Total Available Liquidity
               <InfoTooltip content="Combined available liquidity across Checking, Reserve Vault, and Treasury." />
             </span>
@@ -192,7 +192,7 @@ export const DashboardOverviewPage: React.FC = () => {
               currency={cur}
               className="font-mono text-3xl sm:text-4xl font-semibold tracking-tight block"
             />
-            <span className="text-xs text-[#929DB0] block font-mono">
+            <span className="text-xs text-[#5A6679] dark:text-[#929DB0] block font-mono">
               Ledger:{' '}
               <AnimatedCurrency
                 amountUSD={totalCurrentBalance}
@@ -202,7 +202,7 @@ export const DashboardOverviewPage: React.FC = () => {
             </span>
           </div>
           <div className="w-28 shrink-0 hidden sm:block">
-            <Sparkline data={[812, 830, 848, 868, 871, 892]} color="#D6B878" height={52} />
+            <Sparkline data={[812, 830, 848, 868, 871, 892]} color={theme === 'dark' ? '#D6B878' : '#B39352'} height={52} />
             <span className="block text-right text-[10px] font-mono text-[#36C995] mt-1">
               +4.6% MoM
             </span>
@@ -361,8 +361,8 @@ export const DashboardOverviewPage: React.FC = () => {
                     onClick={() => setDateRange(r)}
                     className={`px-2.5 py-1 rounded-lg ${
                       dateRange === r
-                        ? 'bg-[#080D18] dark:bg-[#1B273D] text-[#F5F2EA] font-semibold'
-                        : 'text-[#6E7A8E] dark:text-[#929DB0]'
+                        ? 'bg-[#0A0F1A] dark:bg-[#1B273D] text-[#FAF8F5] dark:text-[#F5F2EA] font-semibold shadow-sm'
+                        : 'text-[#6B778D] dark:text-[#929DB0]'
                     }`}
                   >
                     {r}
@@ -386,10 +386,10 @@ export const DashboardOverviewPage: React.FC = () => {
                       <stop offset="95%" stopColor="#D6B878" stopOpacity={0} />
                     </linearGradient>
                   </defs>
-                  <CartesianGrid strokeDasharray="3 3" stroke="rgba(146,157,176,0.12)" vertical={false} />
-                  <XAxis dataKey="month" stroke="#929DB0" fontSize={12} tickLine={false} axisLine={false} />
+                  <CartesianGrid strokeDasharray="3 3" stroke={theme === 'dark' ? 'rgba(146,157,176,0.12)' : 'rgba(10,15,26,0.06)'} vertical={false} />
+                  <XAxis dataKey="month" stroke={theme === 'dark' ? '#929DB0' : '#6B778D'} fontSize={12} tickLine={false} axisLine={false} />
                   <YAxis
-                    stroke="#929DB0"
+                    stroke={theme === 'dark' ? '#929DB0' : '#6B778D'}
                     fontSize={12}
                     tickLine={false}
                     axisLine={false}
@@ -398,10 +398,11 @@ export const DashboardOverviewPage: React.FC = () => {
                   />
                   <Tooltip
                     contentStyle={{
-                      backgroundColor: '#0D1423',
-                      borderColor: 'rgba(214, 184, 120, 0.35)',
+                      backgroundColor: theme === 'dark' ? '#0D1423' : '#FFFFFF',
+                      borderColor: theme === 'dark' ? 'rgba(214, 184, 120, 0.35)' : 'rgba(179, 147, 82, 0.35)',
                       borderRadius: '12px',
-                      color: '#F5F2EA',
+                      color: theme === 'dark' ? '#F5F2EA' : '#0A0F1A',
+                      boxShadow: theme === 'dark' ? '0 10px 25px -5px rgba(0,0,0,0.5)' : '0 10px 25px -5px rgba(10,15,26,0.08)',
                       fontFamily: 'JetBrains Mono, monospace',
                       fontSize: '12px',
                     }}
@@ -424,10 +425,10 @@ export const DashboardOverviewPage: React.FC = () => {
             ) : (
               <ResponsiveContainer width="100%" height="100%">
                 <BarChart data={chartData} barGap={6}>
-                  <CartesianGrid strokeDasharray="3 3" stroke="rgba(146,157,176,0.12)" vertical={false} />
-                  <XAxis dataKey="month" stroke="#929DB0" fontSize={12} tickLine={false} axisLine={false} />
+                  <CartesianGrid strokeDasharray="3 3" stroke={theme === 'dark' ? 'rgba(146,157,176,0.12)' : 'rgba(10,15,26,0.06)'} vertical={false} />
+                  <XAxis dataKey="month" stroke={theme === 'dark' ? '#929DB0' : '#6B778D'} fontSize={12} tickLine={false} axisLine={false} />
                   <YAxis
-                    stroke="#929DB0"
+                    stroke={theme === 'dark' ? '#929DB0' : '#6B778D'}
                     fontSize={12}
                     tickLine={false}
                     axisLine={false}
@@ -435,10 +436,11 @@ export const DashboardOverviewPage: React.FC = () => {
                   />
                   <Tooltip
                     contentStyle={{
-                      backgroundColor: '#0D1423',
-                      borderColor: 'rgba(214, 184, 120, 0.35)',
+                      backgroundColor: theme === 'dark' ? '#0D1423' : '#FFFFFF',
+                      borderColor: theme === 'dark' ? 'rgba(214, 184, 120, 0.35)' : 'rgba(179, 147, 82, 0.35)',
                       borderRadius: '12px',
-                      color: '#F5F2EA',
+                      color: theme === 'dark' ? '#F5F2EA' : '#0A0F1A',
+                      boxShadow: theme === 'dark' ? '0 10px 25px -5px rgba(0,0,0,0.5)' : '0 10px 25px -5px rgba(10,15,26,0.08)',
                       fontFamily: 'JetBrains Mono, monospace',
                       fontSize: '12px',
                     }}
