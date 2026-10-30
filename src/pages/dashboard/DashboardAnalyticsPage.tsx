@@ -421,10 +421,10 @@ export const DashboardAnalyticsPage: React.FC = () => {
             <ResponsiveContainer width="100%" height="100%">
               {chartType === 'bar' ? (
                 <BarChart data={syncedHistory} barGap={6}>
-                  <CartesianGrid strokeDasharray="3 3" stroke="rgba(146,157,176,0.12)" vertical={false} />
-                  <XAxis dataKey="month" stroke="#929DB0" fontSize={12} tickLine={false} axisLine={false} />
+                  <CartesianGrid strokeDasharray="3 3" stroke={theme === 'dark' ? 'rgba(146,157,176,0.12)' : 'rgba(10,15,26,0.06)'} vertical={false} />
+                  <XAxis dataKey="month" stroke={theme === 'dark' ? '#929DB0' : '#6B778D'} fontSize={12} tickLine={false} axisLine={false} />
                   <YAxis
-                    stroke="#929DB0"
+                    stroke={theme === 'dark' ? '#929DB0' : '#6B778D'}
                     fontSize={12}
                     tickLine={false}
                     axisLine={false}
@@ -432,10 +432,11 @@ export const DashboardAnalyticsPage: React.FC = () => {
                   />
                   <Tooltip
                     contentStyle={{
-                      backgroundColor: '#0D1423',
-                      borderColor: 'rgba(214, 184, 120, 0.35)',
+                      backgroundColor: theme === 'dark' ? '#0D1423' : '#FFFFFF',
+                      borderColor: theme === 'dark' ? 'rgba(214, 184, 120, 0.35)' : 'rgba(179, 147, 82, 0.35)',
                       borderRadius: '12px',
-                      color: '#F5F2EA',
+                      color: theme === 'dark' ? '#F5F2EA' : '#0A0F1A',
+                      boxShadow: theme === 'dark' ? '0 10px 25px -5px rgba(0,0,0,0.5)' : '0 10px 25px -5px rgba(10,15,26,0.08)',
                       fontFamily: 'JetBrains Mono, monospace',
                       fontSize: '12px',
                     }}
@@ -470,10 +471,10 @@ export const DashboardAnalyticsPage: React.FC = () => {
                       <stop offset="95%" stopColor="#D6B878" stopOpacity={0.0} />
                     </linearGradient>
                   </defs>
-                  <CartesianGrid strokeDasharray="3 3" stroke="rgba(146,157,176,0.12)" vertical={false} />
-                  <XAxis dataKey="month" stroke="#929DB0" fontSize={12} tickLine={false} axisLine={false} />
+                  <CartesianGrid strokeDasharray="3 3" stroke={theme === 'dark' ? 'rgba(146,157,176,0.12)' : 'rgba(10,15,26,0.06)'} vertical={false} />
+                  <XAxis dataKey="month" stroke={theme === 'dark' ? '#929DB0' : '#6B778D'} fontSize={12} tickLine={false} axisLine={false} />
                   <YAxis
-                    stroke="#929DB0"
+                    stroke={theme === 'dark' ? '#929DB0' : '#6B778D'}
                     fontSize={12}
                     tickLine={false}
                     axisLine={false}
@@ -481,10 +482,11 @@ export const DashboardAnalyticsPage: React.FC = () => {
                   />
                   <Tooltip
                     contentStyle={{
-                      backgroundColor: '#0D1423',
-                      borderColor: 'rgba(214, 184, 120, 0.35)',
+                      backgroundColor: theme === 'dark' ? '#0D1423' : '#FFFFFF',
+                      borderColor: theme === 'dark' ? 'rgba(214, 184, 120, 0.35)' : 'rgba(179, 147, 82, 0.35)',
                       borderRadius: '12px',
-                      color: '#F5F2EA',
+                      color: theme === 'dark' ? '#F5F2EA' : '#0A0F1A',
+                      boxShadow: theme === 'dark' ? '0 10px 25px -5px rgba(0,0,0,0.5)' : '0 10px 25px -5px rgba(10,15,26,0.08)',
                       fontFamily: 'JetBrains Mono, monospace',
                       fontSize: '12px',
                     }}
@@ -509,10 +511,10 @@ export const DashboardAnalyticsPage: React.FC = () => {
                 </AreaChart>
               ) : (
                 <LineChart data={syncedHistory}>
-                  <CartesianGrid strokeDasharray="3 3" stroke="rgba(146,157,176,0.12)" vertical={false} />
-                  <XAxis dataKey="month" stroke="#929DB0" fontSize={12} tickLine={false} axisLine={false} />
+                  <CartesianGrid strokeDasharray="3 3" stroke={theme === 'dark' ? 'rgba(146,157,176,0.12)' : 'rgba(10,15,26,0.06)'} vertical={false} />
+                  <XAxis dataKey="month" stroke={theme === 'dark' ? '#929DB0' : '#6B778D'} fontSize={12} tickLine={false} axisLine={false} />
                   <YAxis
-                    stroke="#929DB0"
+                    stroke={theme === 'dark' ? '#929DB0' : '#6B778D'}
                     fontSize={12}
                     tickLine={false}
                     axisLine={false}
@@ -520,10 +522,11 @@ export const DashboardAnalyticsPage: React.FC = () => {
                   />
                   <Tooltip
                     contentStyle={{
-                      backgroundColor: '#0D1423',
-                      borderColor: 'rgba(214, 184, 120, 0.35)',
+                      backgroundColor: theme === 'dark' ? '#0D1423' : '#FFFFFF',
+                      borderColor: theme === 'dark' ? 'rgba(214, 184, 120, 0.35)' : 'rgba(179, 147, 82, 0.35)',
                       borderRadius: '12px',
-                      color: '#F5F2EA',
+                      color: theme === 'dark' ? '#F5F2EA' : '#0A0F1A',
+                      boxShadow: theme === 'dark' ? '0 10px 25px -5px rgba(0,0,0,0.5)' : '0 10px 25px -5px rgba(10,15,26,0.08)',
                       fontFamily: 'JetBrains Mono, monospace',
                       fontSize: '12px',
                     }}
