@@ -35,7 +35,7 @@ export const LoginPage: React.FC = () => {
     <div className="max-w-xl mx-auto px-4 sm:px-6 py-16 sm:py-24">
       <div className="rounded-3xl bg-white dark:bg-[#141D2D] border border-[#080D18]/10 dark:border-[#D6B878]/30 p-8 sm:p-10 shadow-luxury space-y-6">
         <div className="space-y-2 text-center">
-          <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-mono uppercase tracking-[0.2em] bg-[#D6B878]/15 text-[#B39352] dark:text-[#D6B878]">
+          <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-[11px] font-mono uppercase tracking-[0.2em] bg-[#D6B878]/15 text-[#B39352] dark:text-[#D6B878]">
             <KeyRound className="w-3.5 h-3.5" /> Sandbox Portal
           </span>
           <h1 className="font-serif text-3xl sm:text-4xl font-semibold">

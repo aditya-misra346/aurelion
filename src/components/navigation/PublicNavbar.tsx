@@ -95,7 +95,7 @@ export const PublicNavbar: React.FC<PublicNavbarProps> = ({ onOpenCommandPalette
 
   return (
     <header
-      className={`public-navbar sticky top-0 z-50 w-full transition-all duration-300 ${
+      className={`sticky top-0 z-50 w-full transition-all duration-300 ${
         scrolled
           ? 'bg-[#F5F2EA]/90 dark:bg-[#080D18]/90 backdrop-blur-xl border-b border-[#080D18]/10 dark:border-[#F5F2EA]/10 shadow-sm'
           : 'bg-transparent border-b border-transparent'

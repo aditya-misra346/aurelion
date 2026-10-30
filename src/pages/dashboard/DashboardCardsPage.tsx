@@ -89,7 +89,7 @@ export const DashboardCardsPage: React.FC = () => {
               <div className="flex items-center justify-between">
                 <span className="text-xs font-semibold">{card.name}</span>
                 <span
-                  className={`text-[11px] font-mono px-2 py-0.5 rounded ${
+                  className={`text-[10px] font-mono px-2 py-0.5 rounded ${
                     card.status === 'Active'
                       ? 'bg-[#36C995]/20 text-[#36C995]'
                       : 'bg-[#FF7777]/20 text-[#FF7777]'
@@ -359,7 +359,7 @@ export const DashboardCardsPage: React.FC = () => {
                       <div className="flex items-center gap-2">
                         <span className="font-semibold">{t.merchant}</span>
                         {t.status !== 'Completed' && (
-                          <span className="text-[11px] font-mono px-1.5 py-0.5 rounded bg-[#FF7777]/15 text-[#FF7777]">
+                          <span className="text-[10px] font-mono px-1.5 py-0.5 rounded bg-[#FF7777]/15 text-[#FF7777]">
                             {t.status}
                           </span>
                         )}

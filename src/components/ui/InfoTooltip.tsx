@@ -29,7 +29,7 @@ export const InfoTooltip: React.FC<InfoTooltipProps> = ({ content, label = 'More
       {open && (
         <span
           role="tooltip"
-          className="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 w-60 p-2.5 rounded-xl bg-white dark:bg-[#0D1423] text-[#0A0F1A] dark:text-[#F5F2EA] border border-[#D6B878]/35 shadow-luxury-light dark:shadow-luxury text-xs font-sans font-normal leading-relaxed z-50 pointer-events-none animate-in fade-in zoom-in-95 duration-150"
+          className="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 w-60 p-2.5 rounded-xl bg-white dark:bg-[#0D1423] text-[#0A0F1A] dark:text-[#F5F2EA] border border-[#D6B878]/35 shadow-luxury-light dark:shadow-luxury text-[11px] font-sans font-normal leading-relaxed z-50 pointer-events-none animate-in fade-in zoom-in-95 duration-150"
         >
           {content}
         </span>

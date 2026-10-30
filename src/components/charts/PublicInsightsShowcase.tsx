@@ -39,7 +39,7 @@ export const PublicInsightsShowcase: React.FC = () => {
           <h3 className="font-serif text-2xl sm:text-3xl font-semibold text-[#080D18] dark:text-[#F5F2EA]">
             Live Telemetry Studio
           </h3>
-          <span className="text-[11px] font-mono uppercase tracking-wider px-2 py-0.5 rounded bg-[#D6B878]/15 text-[#B39352] dark:text-[#D6B878]">
+          <span className="text-[10px] font-mono uppercase tracking-wider px-2 py-0.5 rounded bg-[#D6B878]/15 text-[#B39352] dark:text-[#D6B878]">
             Sample Data
           </span>
         </div>
@@ -213,13 +213,13 @@ export const PublicInsightsShowcase: React.FC = () => {
         <div className="lg:col-span-4 space-y-4">
           <div className="p-5 rounded-2xl bg-[#F5F2EA] dark:bg-[#0D1423] border border-[#080D18]/10 dark:border-[#F5F2EA]/10 flex items-center justify-between gap-4">
             <div>
-              <span className="text-[11px] font-mono uppercase tracking-wider text-[#6E7A8E] dark:text-[#929DB0] block">
+              <span className="text-[10px] font-mono uppercase tracking-wider text-[#6E7A8E] dark:text-[#929DB0] block">
                 Net Cash Flow
               </span>
               <span className="text-2xl font-mono font-semibold text-[#36C995] tabular-nums mt-1 block">
                 +$20,370
               </span>
-              <span className="text-xs text-[#6E7A8E] dark:text-[#929DB0] mt-1 block">
+              <span className="text-[11px] text-[#6E7A8E] dark:text-[#929DB0] mt-1 block">
                 $41.4k In • $21.0k Out
               </span>
             </div>
@@ -235,7 +235,7 @@ export const PublicInsightsShowcase: React.FC = () => {
 
           <div className="p-5 rounded-2xl bg-[#F5F2EA] dark:bg-[#0D1423] border border-[#080D18]/10 dark:border-[#F5F2EA]/10 space-y-3">
             <div className="flex items-center justify-between">
-              <span className="text-[11px] font-mono uppercase tracking-wider text-[#6E7A8E] dark:text-[#929DB0]">
+              <span className="text-[10px] font-mono uppercase tracking-wider text-[#6E7A8E] dark:text-[#929DB0]">
                 Liquidity Distribution
               </span>
               <span className="font-mono text-sm font-semibold tabular-nums">$892,050</span>
@@ -246,7 +246,7 @@ export const PublicInsightsShowcase: React.FC = () => {
               <div className="h-full bg-[#36C995]" style={{ width: '35%' }} title="Reserve Vault: $312.4k" />
               <div className="h-full bg-[#6366F1]" style={{ width: '55%' }} title="Treasury: $495k" />
             </div>
-            <div className="flex items-center justify-between text-[11px] font-mono text-[#6E7A8E] dark:text-[#929DB0]">
+            <div className="flex items-center justify-between text-[10px] font-mono text-[#6E7A8E] dark:text-[#929DB0]">
               <span className="inline-flex items-center gap-1">
                 <i className="w-2 h-2 rounded-full bg-[#D6B878]" /> 10% Chk
               </span>

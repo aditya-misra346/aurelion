@@ -203,7 +203,7 @@ export const DashboardOverviewPage: React.FC = () => {
           </div>
           <div className="w-28 shrink-0 hidden sm:block">
             <Sparkline data={[812, 830, 848, 868, 871, 892]} color={theme === 'dark' ? '#D6B878' : '#B39352'} height={52} />
-            <span className="block text-right text-[11px] font-mono text-[#36C995] mt-1">
+            <span className="block text-right text-[10px] font-mono text-[#36C995] mt-1">
               +4.6% MoM
             </span>
           </div>
@@ -258,7 +258,7 @@ export const DashboardOverviewPage: React.FC = () => {
               currency={cur}
               className="font-mono text-xl font-semibold text-[#36C995] mt-1 block"
             />
-            <span className="text-[11px] font-mono text-[#6E7A8E] dark:text-[#929DB0] mt-1 block">
+            <span className="text-[10px] font-mono text-[#6E7A8E] dark:text-[#929DB0] mt-1 block">
               Goals Funded
             </span>
           </div>
@@ -289,7 +289,7 @@ export const DashboardOverviewPage: React.FC = () => {
             >
               <div className="flex items-start justify-between gap-2">
                 <div>
-                  <span className="text-[11px] font-mono uppercase tracking-widest text-[#B39352] dark:text-[#D6B878]">
+                  <span className="text-[10px] font-mono uppercase tracking-widest text-[#B39352] dark:text-[#D6B878]">
                     {acc.type}
                   </span>
                   <h2 className="text-sm font-semibold mt-0.5">{acc.name}</h2>
@@ -299,7 +299,7 @@ export const DashboardOverviewPage: React.FC = () => {
 
               <div className="mt-4 flex items-end justify-between gap-4">
                 <div>
-                  <span className="text-[11px] uppercase tracking-wider text-[#6E7A8E] dark:text-[#929DB0] block">
+                  <span className="text-[10px] uppercase tracking-wider text-[#6E7A8E] dark:text-[#929DB0] block">
                     Available
                   </span>
                   <AnimatedCurrency
@@ -584,7 +584,7 @@ export const DashboardOverviewPage: React.FC = () => {
                       <p className="text-sm font-semibold truncate">{t.merchant}</p>
                       {t.status !== 'Completed' && (
                         <span
-                          className={`text-[11px] font-mono px-1.5 py-0.5 rounded ${
+                          className={`text-[10px] font-mono px-1.5 py-0.5 rounded ${
                             t.status === 'Pending'
                               ? 'bg-[#D6B878]/20 text-[#D6B878]'
                               : 'bg-[#FF7777]/20 text-[#FF7777]'
@@ -614,7 +614,7 @@ export const DashboardOverviewPage: React.FC = () => {
                         : ''
                     }`}
                   />
-                  <span className="text-[11px] text-[#6E7A8E] dark:text-[#929DB0] block">
+                  <span className="text-[10px] text-[#6E7A8E] dark:text-[#929DB0] block">
                     {t.accountName.split(' ')[0]}
                   </span>
                 </div>
@@ -712,7 +712,7 @@ export const DashboardOverviewPage: React.FC = () => {
                   >
                     <div className="min-w-0">
                       <p className="font-semibold truncate">{rec.merchant}</p>
-                      <p className="text-xs text-[#6E7A8E] dark:text-[#929DB0]">
+                      <p className="text-[11px] text-[#6E7A8E] dark:text-[#929DB0]">
                         {formatDate(rec.nextDate)} • {rec.status}
                       </p>
                     </div>

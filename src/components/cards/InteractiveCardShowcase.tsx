@@ -199,7 +199,7 @@ export const InteractiveCardShowcase: React.FC = () => {
                     {card.name}
                   </p>
                   <p
-                    className={`text-[11px] font-mono ${
+                    className={`text-[10px] font-mono ${
                       isDark ? 'opacity-65' : 'text-[#6E7A8E]'
                     }`}
                   >
@@ -217,7 +217,7 @@ export const InteractiveCardShowcase: React.FC = () => {
         <div className="space-y-5">
           <div className="flex items-center justify-between">
             <div>
-              <span className="text-[11px] font-mono uppercase tracking-[0.2em] text-[#9E7B35] dark:text-[#D6B878] block">
+              <span className="text-[10px] font-mono uppercase tracking-[0.2em] text-[#9E7B35] dark:text-[#D6B878] block">
                 {activeCard.tierLabel}
               </span>
               <h3 className="font-serif text-3xl font-semibold mt-0.5">

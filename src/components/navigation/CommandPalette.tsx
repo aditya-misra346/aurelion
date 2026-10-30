@@ -376,7 +376,7 @@ export const CommandPalette: React.FC<CommandPaletteProps> = ({ isOpen, onClose 
             className="w-full bg-transparent text-sm sm:text-base text-[#080D18] dark:text-[#F5F2EA] placeholder-[#6E7A8E] dark:placeholder-[#929DB0] focus:outline-none"
           />
           <div className="flex items-center gap-1.5 shrink-0">
-            <kbd className="hidden sm:inline-block px-2 py-0.5 text-[11px] font-mono rounded bg-[#F5F2EA] dark:bg-[#0D1423] text-[#6E7A8E] dark:text-[#929DB0] border border-current/15">
+            <kbd className="hidden sm:inline-block px-2 py-0.5 text-[10px] font-mono rounded bg-[#F5F2EA] dark:bg-[#0D1423] text-[#6E7A8E] dark:text-[#929DB0] border border-current/15">
               ESC
             </kbd>
             <button
@@ -409,7 +409,7 @@ export const CommandPalette: React.FC<CommandPaletteProps> = ({ isOpen, onClose 
               return (
                 <React.Fragment key={item.id}>
                   {showGroupHeader && (
-                    <div className="px-3 pt-3 pb-1 text-[11px] font-mono uppercase tracking-[0.2em] text-[#B39352] dark:text-[#D6B878]">
+                    <div className="px-3 pt-3 pb-1 text-[10px] font-mono uppercase tracking-[0.2em] text-[#B39352] dark:text-[#D6B878]">
                       {item.group}
                     </div>
                   )}
@@ -435,7 +435,7 @@ export const CommandPalette: React.FC<CommandPaletteProps> = ({ isOpen, onClose 
                       </div>
                       <div className="min-w-0">
                         <p className="text-xs sm:text-sm font-semibold truncate">{item.label}</p>
-                        <p className="text-xs text-[#6E7A8E] dark:text-[#929DB0] truncate">
+                        <p className="text-[11px] text-[#6E7A8E] dark:text-[#929DB0] truncate">
                           {item.sublabel}
                         </p>
                       </div>
@@ -443,7 +443,7 @@ export const CommandPalette: React.FC<CommandPaletteProps> = ({ isOpen, onClose 
 
                     <div className="flex items-center gap-2 shrink-0">
                       {item.badge && (
-                        <span className="text-[11px] font-mono uppercase tracking-wider px-2 py-0.5 rounded bg-[#080D18]/5 dark:bg-[#0D1423] text-[#B39352] dark:text-[#D6B878]">
+                        <span className="text-[10px] font-mono uppercase tracking-wider px-2 py-0.5 rounded bg-[#080D18]/5 dark:bg-[#0D1423] text-[#B39352] dark:text-[#D6B878]">
                           {item.badge}
                         </span>
                       )}
@@ -461,14 +461,14 @@ export const CommandPalette: React.FC<CommandPaletteProps> = ({ isOpen, onClose 
         </div>
 
         {/* Footer Hints */}
-        <div className="px-5 py-3 bg-[#F5F2EA]/70 dark:bg-[#0D1423] border-t border-[#080D18]/10 dark:border-[#F5F2EA]/10 flex flex-wrap items-center justify-between gap-2 text-xs text-[#6E7A8E] dark:text-[#929DB0]">
+        <div className="px-5 py-3 bg-[#F5F2EA]/70 dark:bg-[#0D1423] border-t border-[#080D18]/10 dark:border-[#F5F2EA]/10 flex flex-wrap items-center justify-between gap-2 text-[11px] text-[#6E7A8E] dark:text-[#929DB0]">
           <div className="flex items-center gap-3">
             <span className="inline-flex items-center gap-1">
               <Command className="w-3.5 h-3.5 text-[#D6B878]" />
               <span>Aurelion Instant Navigation</span>
             </span>
           </div>
-          <div className="flex items-center gap-3 font-mono text-[11px]">
+          <div className="flex items-center gap-3 font-mono text-[10px]">
             <span>↑↓ Navigate</span>
             <span>↵ Select</span>
             <span>ESC Dismiss</span>

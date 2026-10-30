@@ -215,7 +215,7 @@ export const AllocationDonut: React.FC<AllocationDonutProps> = ({
 
         {/* Center Metric Overlay */}
         <div className="absolute inset-0 flex flex-col items-center justify-center pointer-events-none text-center px-4">
-          <span className="text-[11px] font-mono uppercase tracking-wider text-[#6E7A8E] dark:text-[#929DB0] truncate max-w-[110px]">
+          <span className="text-[10px] font-mono uppercase tracking-wider text-[#6E7A8E] dark:text-[#929DB0] truncate max-w-[110px]">
             {activeItem ? activeItem.name.split(' ')[0] : resolvedTitle}
           </span>
           <span className="font-mono text-base font-semibold tabular-nums mt-0.5">
@@ -285,7 +285,7 @@ export const InteractiveWealthProjector: React.FC = () => {
     <div className="rounded-3xl p-6 sm:p-8 bg-white dark:bg-[#141D2D] border border-[#080D18]/10 dark:border-[#F5F2EA]/10 shadow-luxury-light dark:shadow-luxury space-y-6">
       <div className="flex flex-wrap items-center justify-between gap-4">
         <div>
-          <span className="text-[11px] font-mono uppercase tracking-[0.2em] text-[#B39352] dark:text-[#D6B878] block">
+          <span className="text-[10px] font-mono uppercase tracking-[0.2em] text-[#B39352] dark:text-[#D6B878] block">
             Interactive Capital Trajectory (Simulated)
           </span>
           <div className="flex items-baseline gap-3 mt-1">

@@ -57,7 +57,7 @@ export const BrandMark: React.FC<BrandMarkProps> = ({
           AURELION
         </span>
         {showTagline && (
-          <span className="text-[11px] uppercase tracking-[0.22em] text-[#6E7A8E] dark:text-[#929DB0] mt-1">
+          <span className="text-[10px] uppercase tracking-[0.22em] text-[#6E7A8E] dark:text-[#929DB0] mt-1">
             Private Digital Banking
           </span>
         )}

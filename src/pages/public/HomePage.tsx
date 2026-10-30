@@ -161,7 +161,7 @@ export const HomePage: React.FC = () => {
               {/* 3 Compact Sparkline KPI Tiles */}
               <div className="pt-3 grid grid-cols-3 gap-3 max-w-lg">
                 <div className="p-3 rounded-2xl bg-white/70 dark:bg-[#141D2D]/80 border border-current/10">
-                  <span className="text-[11px] font-mono uppercase text-[#6E7A8E] dark:text-[#929DB0] block">
+                  <span className="text-[10px] font-mono uppercase text-[#6E7A8E] dark:text-[#929DB0] block">
                     Liquidity
                   </span>
                   <span className="font-mono text-base font-semibold tabular-nums block mt-0.5">
@@ -171,7 +171,7 @@ export const HomePage: React.FC = () => {
                 </div>
 
                 <div className="p-3 rounded-2xl bg-white/70 dark:bg-[#141D2D]/80 border border-current/10">
-                  <span className="text-[11px] font-mono uppercase text-[#6E7A8E] dark:text-[#929DB0] block">
+                  <span className="text-[10px] font-mono uppercase text-[#6E7A8E] dark:text-[#929DB0] block">
                     Saved Rate
                   </span>
                   <span className="font-mono text-base font-semibold text-[#36C995] tabular-nums block mt-0.5">
@@ -181,7 +181,7 @@ export const HomePage: React.FC = () => {
                 </div>
 
                 <div className="p-3 rounded-2xl bg-white/70 dark:bg-[#141D2D]/80 border border-current/10">
-                  <span className="text-[11px] font-mono uppercase text-[#6E7A8E] dark:text-[#929DB0] block">
+                  <span className="text-[10px] font-mono uppercase text-[#6E7A8E] dark:text-[#929DB0] block">
                     Metal Cards
                   </span>
                   <span className="font-mono text-base font-semibold text-[#B39352] dark:text-[#D6B878] tabular-nums block mt-0.5">
@@ -202,7 +202,7 @@ export const HomePage: React.FC = () => {
               <div className="rounded-3xl bg-white dark:bg-[#141D2D] border border-[#080D18]/10 dark:border-[#D6B878]/30 p-4 sm:p-6 shadow-luxury space-y-4 sm:space-y-5">
                 <div className="flex items-center justify-between border-b border-[#080D18]/10 dark:border-[#F5F2EA]/10 pb-3.5">
                   <div>
-                    <span className="text-[11px] font-mono uppercase tracking-[0.18em] text-[#6E7A8E] dark:text-[#929DB0] block">
+                    <span className="text-[10px] font-mono uppercase tracking-[0.18em] text-[#6E7A8E] dark:text-[#929DB0] block">
                       Total Portfolio Balance
                     </span>
                     <div className="flex items-baseline gap-2.5 mt-0.5">
@@ -253,7 +253,7 @@ export const HomePage: React.FC = () => {
 
                   <div className="p-3.5 rounded-2xl bg-[#F5F2EA] dark:bg-[#0D1423] border border-current/5 flex items-center justify-between gap-2">
                     <div className="min-w-0">
-                      <span className="text-[11px] font-mono uppercase text-[#B39352] dark:text-[#D6B878] block">
+                      <span className="text-[10px] font-mono uppercase text-[#B39352] dark:text-[#D6B878] block">
                         Goal Funded
                       </span>
                       <p className="text-xs font-semibold truncate mt-0.5">Como Reserve</p>
@@ -286,7 +286,7 @@ export const HomePage: React.FC = () => {
                 </div>
                 <div className="min-w-0">
                   <p className="text-xs font-semibold truncate">{item.title}</p>
-                  <span className="text-[11px] font-mono text-[#6E7A8E] dark:text-[#929DB0]">
+                  <span className="text-[10px] font-mono text-[#6E7A8E] dark:text-[#929DB0]">
                     {item.badge}
                   </span>
                 </div>
@@ -378,7 +378,7 @@ export const HomePage: React.FC = () => {
               <div className="space-y-4">
                 <div className="flex items-center justify-between">
                   <span
-                    className={`text-[11px] font-mono uppercase tracking-widest px-2.5 py-0.5 rounded-full ${
+                    className={`text-[10px] font-mono uppercase tracking-widest px-2.5 py-0.5 rounded-full ${
                       tier.featured
                         ? 'bg-[#D6B878] text-[#080D18] font-semibold'
                         : 'bg-[#D6B878]/15 text-[#B39352] dark:text-[#D6B878]'
@@ -461,7 +461,7 @@ export const HomePage: React.FC = () => {
           <div className="lg:col-span-7 rounded-3xl p-6 bg-white dark:bg-[#141D2D] border border-[#080D18]/10 dark:border-[#F5F2EA]/10 flex flex-col justify-between space-y-5">
             <div className="flex items-center justify-between">
               <div>
-                <span className="text-[11px] font-mono uppercase tracking-widest text-[#B39352] dark:text-[#D6B878]">
+                <span className="text-[10px] font-mono uppercase tracking-widest text-[#B39352] dark:text-[#D6B878]">
                   Unified Accounts
                 </span>
                 <h3 className="font-serif text-2xl font-semibold mt-0.5">
@@ -483,7 +483,7 @@ export const HomePage: React.FC = () => {
                 { label: 'Treasury', val: '$495,000', spark: [440, 455, 470, 482, 495], color: '#6366F1' },
               ].map((acc, i) => (
                 <div key={i} className="p-3.5 rounded-2xl bg-[#F5F2EA] dark:bg-[#0D1423] space-y-1.5">
-                  <span className="text-[11px] text-[#6E7A8E] dark:text-[#929DB0] block">{acc.label}</span>
+                  <span className="text-[10px] text-[#6E7A8E] dark:text-[#929DB0] block">{acc.label}</span>
                   <span className="font-mono text-base font-semibold tabular-nums block">{acc.val}</span>
                   <Sparkline data={acc.spark} color={acc.color} height={24} />
                 </div>
@@ -516,7 +516,7 @@ export const HomePage: React.FC = () => {
           <div className="lg:col-span-5 rounded-3xl bg-pearl-card dark:bg-none dark:bg-[#0D1423] text-[#0A0F1A] dark:text-[#F5F2EA] border border-[#D6B878]/35 dark:border-[#D6B878]/30 shadow-luxury-light dark:shadow-none p-6 flex flex-col justify-between space-y-5">
             <div className="flex items-center justify-between gap-4">
               <div>
-                <span className="text-[11px] font-mono uppercase tracking-widest text-[#36C995] block">
+                <span className="text-[10px] font-mono uppercase tracking-widest text-[#36C995] block">
                   Interactive Security
                 </span>
                 <h3 className="font-serif text-2xl font-semibold mt-0.5">

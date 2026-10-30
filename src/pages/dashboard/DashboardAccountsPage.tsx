@@ -138,7 +138,7 @@ export const DashboardAccountsPage: React.FC = () => {
             >
               <div className="space-y-2">
                 <div className="flex items-center justify-between">
-                  <span className="text-[11px] font-mono uppercase tracking-widest text-[#9E7B35] dark:text-[#D6B878]">
+                  <span className="text-[10px] font-mono uppercase tracking-widest text-[#9E7B35] dark:text-[#D6B878]">
                     {acc.type}
                   </span>
                   <span className="text-xs font-mono opacity-75">{acc.accountNumberMasked}</span>
@@ -149,14 +149,14 @@ export const DashboardAccountsPage: React.FC = () => {
 
               <div className="pt-6 mt-6 border-t border-current/10 flex items-baseline justify-between">
                 <div>
-                  <span className="text-[11px] uppercase tracking-wider opacity-65 block">
+                  <span className="text-[10px] uppercase tracking-wider opacity-65 block">
                     Available Balance
                   </span>
                   <span className="font-mono text-2xl font-semibold tabular-nums">
                     {formatCurrency(acc.availableBalance, { masked: balancesMasked, currency: cur })}
                   </span>
                 </div>
-                <span className="text-xs font-mono text-[#36C995]">Active</span>
+                <span className="text-[11px] font-mono text-[#36C995]">Active</span>
               </div>
             </button>
           );
@@ -180,7 +180,7 @@ export const DashboardAccountsPage: React.FC = () => {
         {/* 3 KPI Balance Boxes */}
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
           <div className="p-4 rounded-2xl bg-[#F5F2EA] dark:bg-[#0D1423]">
-            <span className="text-[11px] uppercase tracking-wider text-[#6E7A8E] dark:text-[#929DB0] block">
+            <span className="text-[10px] uppercase tracking-wider text-[#6E7A8E] dark:text-[#929DB0] block">
               Available Balance
             </span>
             <span className="font-mono text-xl font-semibold text-[#36C995] tabular-nums mt-1 block">
@@ -192,7 +192,7 @@ export const DashboardAccountsPage: React.FC = () => {
           </div>
 
           <div className="p-4 rounded-2xl bg-[#F5F2EA] dark:bg-[#0D1423]">
-            <span className="text-[11px] uppercase tracking-wider text-[#6E7A8E] dark:text-[#929DB0] block">
+            <span className="text-[10px] uppercase tracking-wider text-[#6E7A8E] dark:text-[#929DB0] block">
               Current Ledger
             </span>
             <span className="font-mono text-xl font-semibold tabular-nums mt-1 block">
@@ -204,7 +204,7 @@ export const DashboardAccountsPage: React.FC = () => {
           </div>
 
           <div className="p-4 rounded-2xl bg-[#F5F2EA] dark:bg-[#0D1423]">
-            <span className="text-[11px] uppercase tracking-wider text-[#6E7A8E] dark:text-[#929DB0] block">
+            <span className="text-[10px] uppercase tracking-wider text-[#6E7A8E] dark:text-[#929DB0] block">
               Pending Holds
             </span>
             <span className="font-mono text-xl font-semibold text-[#D6B878] tabular-nums mt-1 block">
@@ -424,7 +424,7 @@ export const DashboardAccountsPage: React.FC = () => {
               <div className="space-y-2.5">
                 <div className="p-3.5 rounded-xl bg-[#F5F2EA] dark:bg-[#0D1423] flex items-center justify-between">
                   <div>
-                    <span className="text-[11px] text-[#6E7A8E] dark:text-[#929DB0] block">
+                    <span className="text-[10px] text-[#6E7A8E] dark:text-[#929DB0] block">
                       Account Identifier
                     </span>
                     <span className="font-mono text-xs font-semibold">
@@ -448,7 +448,7 @@ export const DashboardAccountsPage: React.FC = () => {
 
                 <div className="p-3.5 rounded-xl bg-[#F5F2EA] dark:bg-[#0D1423] flex items-center justify-between">
                   <div>
-                    <span className="text-[11px] text-[#6E7A8E] dark:text-[#929DB0] block">
+                    <span className="text-[10px] text-[#6E7A8E] dark:text-[#929DB0] block">
                       IBAN / Wire Reference
                     </span>
                     <span className="font-mono text-xs font-semibold">{activeAccount.iban}</span>

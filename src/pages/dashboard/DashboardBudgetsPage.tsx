@@ -228,7 +228,7 @@ export const DashboardBudgetsPage: React.FC = () => {
                     <div className="flex items-start justify-between gap-2">
                       <div>
                         <h3 className="text-base font-semibold">{b.category}</h3>
-                        <span className="text-xs font-mono text-[#6E7A8E] dark:text-[#929DB0]">
+                        <span className="text-[11px] font-mono text-[#6E7A8E] dark:text-[#929DB0]">
                           {pct}% utilized •{' '}
                           {formatCurrency(remaining, {
                             masked: balancesMasked,
@@ -403,7 +403,7 @@ export const DashboardBudgetsPage: React.FC = () => {
                 >
                   <div className="flex flex-wrap items-start justify-between gap-2">
                     <div>
-                      <span className="text-[11px] font-mono uppercase tracking-widest text-[#B39352] dark:text-[#D6B878]">
+                      <span className="text-[10px] font-mono uppercase tracking-widest text-[#B39352] dark:text-[#D6B878]">
                         {g.category}
                       </span>
                       <h3 className="font-serif text-2xl font-semibold">{g.name}</h3>
@@ -432,7 +432,7 @@ export const DashboardBudgetsPage: React.FC = () => {
 
                   <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 text-xs font-mono">
                     <div className="p-3 rounded-xl bg-[#F5F2EA] dark:bg-[#0D1423]">
-                      <span className="text-[11px] text-[#6E7A8E] dark:text-[#929DB0] block">
+                      <span className="text-[10px] text-[#6E7A8E] dark:text-[#929DB0] block">
                         Current Saved
                       </span>
                       <span className="text-sm font-semibold tabular-nums">
@@ -444,7 +444,7 @@ export const DashboardBudgetsPage: React.FC = () => {
                       </span>
                     </div>
                     <div className="p-3 rounded-xl bg-[#F5F2EA] dark:bg-[#0D1423]">
-                      <span className="text-[11px] text-[#6E7A8E] dark:text-[#929DB0] block">
+                      <span className="text-[10px] text-[#6E7A8E] dark:text-[#929DB0] block">
                         Target Reserve
                       </span>
                       <span className="text-sm font-semibold tabular-nums">
@@ -456,7 +456,7 @@ export const DashboardBudgetsPage: React.FC = () => {
                       </span>
                     </div>
                     <div className="p-3 rounded-xl bg-[#F5F2EA] dark:bg-[#0D1423]">
-                      <span className="text-[11px] text-[#6E7A8E] dark:text-[#929DB0] block">
+                      <span className="text-[10px] text-[#6E7A8E] dark:text-[#929DB0] block">
                         Projected Completion
                       </span>
                       <span className="text-sm font-semibold text-[#B39352] dark:text-[#D6B878]">
@@ -465,7 +465,7 @@ export const DashboardBudgetsPage: React.FC = () => {
                     </div>
                   </div>
 
-                  <p className="text-xs text-[#6E7A8E] dark:text-[#929DB0] italic">
+                  <p className="text-[11px] text-[#6E7A8E] dark:text-[#929DB0] italic">
                     Assumption: {g.assumptionNote}
                   </p>
 

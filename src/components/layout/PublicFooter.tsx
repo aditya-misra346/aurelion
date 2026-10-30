@@ -161,7 +161,7 @@ export const PublicFooter: React.FC = () => {
             <button
               type="button"
               onClick={() => setShowDisclosure((p) => !p)}
-              className="inline-flex items-center gap-1.5 text-xs text-[#5A6679] dark:text-[#929DB0] hover:text-[#0A0F1A] dark:hover:text-[#F5F2EA] transition-colors"
+              className="inline-flex items-center gap-1.5 text-[11px] text-[#5A6679] dark:text-[#929DB0] hover:text-[#0A0F1A] dark:hover:text-[#F5F2EA] transition-colors"
             >
               <Info className="w-3.5 h-3.5 text-[#9E7B35] dark:text-[#D6B878]" />
               <span>Interactive Demo Sandbox • View Disclosure</span>
@@ -172,7 +172,7 @@ export const PublicFooter: React.FC = () => {
           </div>
 
           {showDisclosure && (
-            <div className="p-3.5 rounded-xl bg-white/80 dark:bg-[#141D2D]/80 border border-[#D6B878]/30 dark:border-[#F5F2EA]/10 text-xs leading-relaxed shadow-sm dark:shadow-none">
+            <div className="p-3.5 rounded-xl bg-white/80 dark:bg-[#141D2D]/80 border border-[#D6B878]/30 dark:border-[#F5F2EA]/10 text-[11px] leading-relaxed shadow-sm dark:shadow-none">
               AURELION is an interactive digital banking demonstration powered by synthetic sample
               data. All balances, yields, cards, and transfers are illustrative simulations. Never
               enter real banking credentials or payment card numbers.
