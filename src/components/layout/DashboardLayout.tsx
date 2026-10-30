@@ -548,7 +548,9 @@ export const DashboardLayout: React.FC = () => {
 
         {/* PAGE CONTENT */}
         <main className="flex-1 p-4 sm:p-6 lg:p-8 pb-16 max-w-7xl w-full mx-auto">
-          <Outlet />
+          <div key={location.pathname} className="page-transition-enter">
+            <Outlet />
+          </div>
 
           {/* Dashboard Page Bottom Footer */}
           <footer className="mt-12 pt-6 border-t border-[#D6B878]/20 dark:border-[#F5F2EA]/10 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-[#6B778D] dark:text-[#929DB0]">
