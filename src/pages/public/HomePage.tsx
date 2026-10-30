@@ -399,18 +399,20 @@ export const HomePage: React.FC = () => {
                   </div>
                 </div>
 
-                <PhysicalCardPreview
-                  variant={tier.cardVariant}
-                  cardholderName="JULIAN V. STERLING"
-                  maskedNumber="4819 •••• •••• 9042"
-                  lastFour="9042"
-                  expiryDate="09/29"
-                  tierLabel={`${tier.name.toUpperCase()} EDITION`}
-                  scale="sm"
-                  interactiveTilt={false}
-                />
+                <div className="py-1">
+                  <PhysicalCardPreview
+                    variant={tier.cardVariant}
+                    cardholderName="JULIAN V. STERLING"
+                    maskedNumber="4819 •••• •••• 9042"
+                    lastFour="9042"
+                    expiryDate="09/29"
+                    tierLabel={`${tier.name.toUpperCase()} EDITION`}
+                    scale="sm"
+                    interactiveTilt={false}
+                  />
+                </div>
 
-                <ul className="space-y-1.5 pt-2 border-t border-current/10">
+                <ul className="space-y-1.5 pt-3 border-t border-current/10">
                   {tier.features.map((feat, idx) => (
                     <li key={idx} className="flex items-center gap-2 text-xs">
                       <CheckCircle2 className="w-3.5 h-3.5 text-[#D6B878] shrink-0" />
