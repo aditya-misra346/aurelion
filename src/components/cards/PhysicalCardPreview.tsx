@@ -152,7 +152,9 @@ export const PhysicalCardPreview: React.FC<PhysicalCardPreviewProps> = ({
       >
         {/* FRONT OF CARD */}
         <div
-          className={`absolute inset-0 w-full h-full rounded-2xl p-6 flex flex-col justify-between backface-hidden border ${style.frontBg} ${style.border}`}
+          className={`absolute inset-0 w-full h-full rounded-2xl ${
+            isSm ? 'p-3.5' : 'p-6'
+          } flex flex-col justify-between backface-hidden border ${style.frontBg} ${style.border}`}
           style={{
             transform: 'rotateY(0deg) translateZ(1px)',
             WebkitTransform: 'rotateY(0deg) translateZ(1px)',
@@ -180,13 +182,17 @@ export const PhysicalCardPreview: React.FC<PhysicalCardPreviewProps> = ({
             <div>
               <div className="flex items-center gap-2">
                 <span
-                  className={`font-serif font-semibold tracking-[0.26em] text-sm sm:text-base ${style.textPrimary}`}
+                  className={`font-serif font-semibold ${
+                    isSm ? 'tracking-[0.22em] text-xs' : 'tracking-[0.26em] text-sm sm:text-base'
+                  } ${style.textPrimary}`}
                 >
                   AURELION
                 </span>
               </div>
               <span
-                className={`block text-[9px] tracking-[0.22em] uppercase mt-0.5 font-medium ${style.textSecondary}`}
+                className={`block ${
+                  isSm ? 'text-[7.5px] tracking-[0.18em]' : 'text-[9px] tracking-[0.22em]'
+                } uppercase mt-0.5 font-medium ${style.textSecondary}`}
               >
                 {tierLabel}
               </span>
@@ -194,75 +200,107 @@ export const PhysicalCardPreview: React.FC<PhysicalCardPreviewProps> = ({
 
             <div className="flex items-center gap-2">
               {isLocked && (
-                <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-[10px] font-medium bg-[#FF7777]/20 text-[#FF7777] border border-[#FF7777]/40">
-                  <Lock className="w-3 h-3" /> Locked
+                <span
+                  className={`inline-flex items-center gap-1 ${
+                    isSm ? 'px-1.5 py-0.2 text-[8px]' : 'px-2 py-0.5 text-[10px]'
+                  } rounded-full font-medium bg-[#FF7777]/20 text-[#FF7777] border border-[#FF7777]/40`}
+                >
+                  <Lock className={isSm ? 'w-2.5 h-2.5' : 'w-3 h-3'} /> Locked
                 </span>
               )}
               <Wifi
-                className={`w-5 h-5 rotate-90 opacity-75 ${style.textPrimary}`}
+                className={`${isSm ? 'w-4 h-4' : 'w-5 h-5'} rotate-90 opacity-75 ${
+                  style.textPrimary
+                }`}
                 aria-label="Contactless enabled"
               />
             </div>
           </div>
 
           {/* Middle Row: Precision EMV Chip & Number */}
-          <div className="relative z-10 my-auto py-1">
-            <div className="flex items-center justify-between mb-4">
+          <div className={`relative z-10 my-auto ${isSm ? 'py-0' : 'py-1'}`}>
+            <div className={`flex items-center justify-between ${isSm ? 'mb-2' : 'mb-4'}`}>
               {/* Precision Metallic EMV Chip */}
               <div
-                className={`w-11 h-8 rounded-md bg-gradient-to-br ${style.chipColor} border border-black/20 shadow-inner relative overflow-hidden flex items-center justify-center`}
+                className={`${
+                  isSm ? 'w-8 h-6 rounded' : 'w-11 h-8 rounded-md'
+                } bg-gradient-to-br ${
+                  style.chipColor
+                } border border-black/20 shadow-inner relative overflow-hidden flex items-center justify-center`}
               >
                 <div className="w-full h-[1px] bg-black/25 absolute top-1/3" />
                 <div className="w-full h-[1px] bg-black/25 absolute bottom-1/3" />
                 <div className="h-full w-[1px] bg-black/25 absolute left-1/3" />
                 <div className="h-full w-[1px] bg-black/25 absolute right-1/3" />
-                <div className="w-4 h-3 rounded-[2px] border border-black/30" />
+                <div
+                  className={`${
+                    isSm ? 'w-3 h-2 rounded-[1px]' : 'w-4 h-3 rounded-[2px]'
+                  } border border-black/30`}
+                />
               </div>
               <span
-                className={`text-[10px] font-mono uppercase tracking-widest px-2 py-0.5 rounded border ${style.badgeBg}`}
+                className={`${
+                  isSm ? 'text-[8px] px-1.5 py-0.5' : 'text-[10px] px-2 py-0.5'
+                } font-mono uppercase tracking-widest rounded border ${style.badgeBg}`}
               >
                 SAMPLE • DEMO
               </span>
             </div>
 
             <p
-              className={`font-mono text-sm sm:text-base md:text-lg tracking-[0.18em] font-medium tabular-nums ${style.textPrimary}`}
+              className={`font-mono ${
+                isSm ? 'text-xs tracking-[0.14em]' : 'text-sm sm:text-base md:text-lg tracking-[0.18em]'
+              } font-medium tabular-nums ${style.textPrimary}`}
             >
               {displayCardNumber}
             </p>
           </div>
 
           {/* Bottom Row: Cardholder, Expiry, Network */}
-          <div className="relative z-10 flex items-end justify-between gap-4 pt-1 border-t border-current/10">
+          <div
+            className={`relative z-10 flex items-end justify-between ${
+              isSm ? 'gap-2 pt-1' : 'gap-4 pt-1'
+            } border-t border-current/10`}
+          >
             <div>
               <span
-                className={`block text-[8px] uppercase tracking-[0.2em] ${style.textSecondary}`}
+                className={`block ${
+                  isSm ? 'text-[7px] tracking-[0.16em]' : 'text-[8px] tracking-[0.2em]'
+                } uppercase ${style.textSecondary}`}
               >
                 Cardholder
               </span>
               <span
-                className={`text-xs sm:text-sm font-medium tracking-[0.14em] uppercase ${style.textPrimary}`}
+                className={`${
+                  isSm ? 'text-[10px] tracking-[0.1em]' : 'text-xs sm:text-sm tracking-[0.14em]'
+                } font-medium uppercase ${style.textPrimary}`}
               >
                 {cardholderName}
               </span>
             </div>
 
-            <div className="flex items-end gap-5">
+            <div className={`flex items-end ${isSm ? 'gap-3' : 'gap-5'}`}>
               <div>
                 <span
-                  className={`block text-[8px] uppercase tracking-[0.2em] ${style.textSecondary}`}
+                  className={`block ${
+                    isSm ? 'text-[7px] tracking-[0.16em]' : 'text-[8px] tracking-[0.2em]'
+                  } uppercase ${style.textSecondary}`}
                 >
                   Valid Thru
                 </span>
                 <span
-                  className={`font-mono text-xs sm:text-sm tabular-nums ${style.textPrimary}`}
+                  className={`font-mono ${
+                    isSm ? 'text-[10px]' : 'text-xs sm:text-sm'
+                  } tabular-nums ${style.textPrimary}`}
                 >
                   {expiryDate}
                 </span>
               </div>
               <div className="text-right">
                 <span
-                  className={`text-[10px] font-serif font-semibold tracking-[0.18em] uppercase ${style.accentColor}`}
+                  className={`${
+                    isSm ? 'text-[8.5px] tracking-[0.14em]' : 'text-[10px] tracking-[0.18em]'
+                  } font-serif font-semibold uppercase ${style.accentColor}`}
                 >
                   {network === 'AURELION PRIVATE' ? 'PRIVATE' : 'INFINITE'}
                 </span>
@@ -288,37 +326,64 @@ export const PhysicalCardPreview: React.FC<PhysicalCardPreviewProps> = ({
             className="absolute inset-0 rounded-2xl overflow-hidden pointer-events-none"
             aria-hidden="true"
           >
-            <div className="w-full h-11 bg-[#05070C] mt-5 opacity-90" />
+            <div className={`w-full ${isSm ? 'h-8 mt-3' : 'h-11 mt-5'} bg-[#05070C] opacity-90`} />
           </div>
 
           {/* Spacer for layout */}
-          <div className="w-full h-11 mt-5 pointer-events-none invisible" aria-hidden="true" />
+          <div
+            className={`w-full ${isSm ? 'h-8 mt-3' : 'h-11 mt-5'} pointer-events-none invisible`}
+            aria-hidden="true"
+          />
 
           {/* Signature & Fictional Security Code */}
-          <div className="relative z-10 px-6 my-auto space-y-3">
-            <div className="flex items-center gap-3">
-              <div className="flex-1 h-8 rounded bg-white/15 backdrop-blur-sm border border-white/20 px-3 flex items-center justify-between">
-                <span className="font-serif italic text-xs tracking-wider opacity-75 text-white">
+          <div className={`relative z-10 ${isSm ? 'px-3.5 space-y-1.5' : 'px-6 space-y-3'} my-auto`}>
+            <div className={`flex items-center ${isSm ? 'gap-2' : 'gap-3'}`}>
+              <div
+                className={`flex-1 ${
+                  isSm ? 'h-6.5 px-2' : 'h-8 px-3'
+                } rounded bg-white/15 backdrop-blur-sm border border-white/20 flex items-center justify-between`}
+              >
+                <span
+                  className={`font-serif italic ${
+                    isSm ? 'text-[10px]' : 'text-xs'
+                  } tracking-wider opacity-75 text-white`}
+                >
                   Julian V. Sterling
                 </span>
-                <span className="text-[9px] uppercase tracking-widest text-white/60">
+                <span
+                  className={`${
+                    isSm ? 'text-[7.5px]' : 'text-[9px]'
+                  } uppercase tracking-widest text-white/60`}
+                >
                   Authorized Signature (Demo)
                 </span>
               </div>
-              <div className="px-3 h-8 rounded bg-[#080D18]/80 border border-[#D6B878]/40 flex items-center justify-center">
-                <span className="font-mono text-xs text-[#D6B878] tracking-widest">
+              <div
+                className={`${
+                  isSm ? 'px-2 h-6.5 text-[10px]' : 'px-3 h-8 text-xs'
+                } rounded bg-[#080D18]/80 border border-[#D6B878]/40 flex items-center justify-center`}
+              >
+                <span className="font-mono text-[#D6B878] tracking-widest">
                   {revealNumbers ? '842' : '•••'}
                 </span>
               </div>
             </div>
-            <p className={`text-[9px] leading-relaxed ${style.textSecondary}`}>
+            <p
+              className={`${
+                isSm ? 'text-[7.5px] leading-tight line-clamp-2' : 'text-[9px] leading-relaxed'
+              } ${style.textSecondary}`}
+            >
               ILLUSTRATIVE DEMONSTRATION INSTRUMENT • NOT A VALID PAYMENT CARD. Issued by Aurelion
-              Fictional Private Bank Demo Environment. End-to-end simulated controls active.
+              Fictional Private Bank Demo Environment.
             </p>
           </div>
 
           {/* Bottom Reverse Metadata */}
-          <div className="relative z-10 px-6 pb-5 flex items-center justify-between text-[10px]">
+          <div
+            className={`relative z-10 ${
+              isSm ? 'px-3.5 pb-2.5 text-[8.5px]' : 'px-6 pb-5 text-[10px]'
+            } flex items-center justify-between`}
+          >
             <span className={`font-mono ${style.textSecondary}`}>
               ID: AURL-{lastFour}-SIM
             </span>
