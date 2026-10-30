@@ -34,7 +34,7 @@ export const PublicLayout: React.FC = () => {
   }, []);
 
   return (
-    <div className="min-h-screen flex flex-col pb-9 bg-[#F5F2EA] dark:bg-[#080D18] text-[#080D18] dark:text-[#F5F2EA] selection:bg-[#D6B878]/30">
+    <div className="min-h-screen flex flex-col pb-9 bg-[#FAF8F5] dark:bg-[#080D18] text-[#0A0F1A] dark:text-[#F5F2EA] selection:bg-[#D6B878]/30">
       <PublicNavbar onOpenCommandPalette={() => setCmdOpen(true)} />
       <main className="flex-1">
         <Outlet />
@@ -47,21 +47,21 @@ export const PublicLayout: React.FC = () => {
           type="button"
           onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
           aria-label="Scroll back to top"
-          className="fixed bottom-12 right-6 z-40 p-3 rounded-2xl bg-[#0D1423] text-[#D6B878] border border-[#D6B878]/35 shadow-luxury hover:bg-[#141D2D] hover:scale-105 transition-all"
+          className="fixed bottom-12 right-6 z-40 p-3 rounded-2xl bg-white dark:bg-[#0D1423] text-[#9E7B35] dark:text-[#D6B878] border border-[#D6B878]/35 shadow-luxury-light dark:shadow-luxury hover:bg-[#F3EFE6] dark:hover:bg-[#141D2D] hover:scale-105 transition-all"
         >
           <ArrowUp className="w-4 h-4" />
         </button>
       )}
 
       {/* Persistent Window-Bottom Creator Signature Bar */}
-      <div className="fixed bottom-0 left-0 right-0 z-40 h-9 bg-[#080D18]/95 backdrop-blur-md border-t border-[#D6B878]/30 px-4 flex items-center justify-center gap-2 text-xs text-[#F5F2EA]">
-        <Sparkles className="w-3.5 h-3.5 text-[#D6B878]" />
-        <span className="font-mono text-[11px] uppercase tracking-[0.18em] text-[#929DB0] hidden sm:inline">
+      <div className="fixed bottom-0 left-0 right-0 z-40 h-9 bg-[#FAF8F5]/95 dark:bg-[#080D18]/95 backdrop-blur-md border-t border-[#D6B878]/25 dark:border-[#D6B878]/30 px-4 flex items-center justify-center gap-2 text-xs text-[#0A0F1A] dark:text-[#F5F2EA]">
+        <Sparkles className="w-3.5 h-3.5 text-[#9E7B35] dark:text-[#D6B878]" />
+        <span className="font-mono text-[11px] uppercase tracking-[0.18em] text-[#6B778D] dark:text-[#929DB0] hidden sm:inline">
           AURELION Digital Banking
         </span>
-        <span className="text-[#D6B878]/50 hidden sm:inline">•</span>
+        <span className="text-[#9E7B35]/50 dark:text-[#D6B878]/50 hidden sm:inline">•</span>
         <span className="font-serif text-sm tracking-wide">
-          Made by <strong className="text-[#D6B878] font-semibold">Aditya Misra</strong>
+          Made by <strong className="text-[#9E7B35] dark:text-[#D6B878] font-semibold">Aditya Misra</strong>
         </span>
       </div>
 
