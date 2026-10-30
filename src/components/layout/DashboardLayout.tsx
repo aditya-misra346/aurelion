@@ -547,12 +547,12 @@ export const DashboardLayout: React.FC = () => {
           <Outlet />
 
           {/* Dashboard Page Bottom Footer */}
-          <footer className="mt-12 pt-6 border-t border-[#080D18]/10 dark:border-[#F5F2EA]/10 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-[#6E7A8E] dark:text-[#929DB0]">
+          <footer className="mt-12 pt-6 border-t border-[#D6B878]/20 dark:border-[#F5F2EA]/10 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-[#6B778D] dark:text-[#929DB0]">
             <span>© {new Date().getFullYear()} AURELION Private Client Terminal (Demo Sandbox)</span>
-            <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white dark:bg-[#141D2D] border border-[#D6B878]/35 font-serif text-sm text-[#080D18] dark:text-[#F5F2EA]">
-              <Sparkles className="w-3.5 h-3.5 text-[#D6B878]" />
+            <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white dark:bg-[#141D2D] border border-[#D6B878]/35 font-serif text-sm text-[#0A0F1A] dark:text-[#F5F2EA] shadow-sm dark:shadow-none">
+              <Sparkles className="w-3.5 h-3.5 text-[#9E7B35] dark:text-[#D6B878]" />
               <span>
-                Made by <strong className="text-[#B39352] dark:text-[#D6B878] font-semibold">Aditya Misra</strong>
+                Made by <strong className="text-[#9E7B35] dark:text-[#D6B878] font-semibold">Aditya Misra</strong>
               </span>
             </span>
           </footer>
@@ -560,14 +560,14 @@ export const DashboardLayout: React.FC = () => {
       </div>
 
       {/* Persistent Window-Bottom Creator Signature Bar */}
-      <div className="fixed bottom-0 left-0 right-0 z-40 h-9 bg-[#080D18]/95 backdrop-blur-md border-t border-[#D6B878]/30 px-4 flex items-center justify-center gap-2 text-xs text-[#F5F2EA]">
-        <Sparkles className="w-3.5 h-3.5 text-[#D6B878]" />
-        <span className="font-mono text-[11px] uppercase tracking-[0.18em] text-[#929DB0] hidden sm:inline">
+      <div className="fixed bottom-0 left-0 right-0 z-40 h-9 bg-[#FAF8F5]/95 dark:bg-[#080D18]/95 backdrop-blur-md border-t border-[#D6B878]/25 dark:border-[#D6B878]/30 px-4 flex items-center justify-center gap-2 text-xs text-[#0A0F1A] dark:text-[#F5F2EA]">
+        <Sparkles className="w-3.5 h-3.5 text-[#9E7B35] dark:text-[#D6B878]" />
+        <span className="font-mono text-[11px] uppercase tracking-[0.18em] text-[#6B778D] dark:text-[#929DB0] hidden sm:inline">
           AURELION Client Terminal
         </span>
-        <span className="text-[#D6B878]/50 hidden sm:inline">•</span>
+        <span className="text-[#9E7B35]/50 dark:text-[#D6B878]/50 hidden sm:inline">•</span>
         <span className="font-serif text-sm tracking-wide">
-          Made by <strong className="text-[#D6B878] font-semibold">Aditya Misra</strong>
+          Made by <strong className="text-[#9E7B35] dark:text-[#D6B878] font-semibold">Aditya Misra</strong>
         </span>
       </div>
 
