@@ -134,7 +134,7 @@ export const PublicNavbar: React.FC<PublicNavbarProps> = ({ onOpenCommandPalette
             </button>
 
             {megaOpen && (
-              <div className="absolute left-0 top-full pt-2 w-[620px] z-50 animate-in fade-in slide-in-from-top-2 duration-200">
+              <div className="absolute left-0 top-full pt-2 w-[620px] z-50 animate-in fade-in slide-in-from-top-2 duration-200 ease-out">
                 <div className="rounded-2xl bg-white dark:bg-[#141D2D] border border-[#080D18]/10 dark:border-[#D6B878]/25 shadow-luxury p-5 grid grid-cols-2 gap-3">
                   {MEGA_MENU_ITEMS.map((item) => {
                     const Icon = item.icon;
