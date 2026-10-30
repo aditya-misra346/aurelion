@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import { useBanking } from '../../contexts/BankingContext';
 import { INITIAL_CARDS } from '../../data/mockBankingData';
 import { PhysicalCardPreview } from './PhysicalCardPreview';
 import { RadialGauge, Sparkline } from '../charts/VisualWidgets';
@@ -23,11 +24,20 @@ const CARD_SPARKLINES: Record<string, number[]> = {
 };
 
 export const InteractiveCardShowcase: React.FC = () => {
+  const { theme } = useBanking();
   const [selectedIndex, setSelectedIndex] = useState(0);
   const [isFlipped, setIsFlipped] = useState(false);
   const [revealNumbers, setRevealNumbers] = useState(false);
   const [cardScale, setCardScale] = useState<'sm' | 'md' | 'lg'>('md');
-  const [studioLight, setStudioLight] = useState<'dark' | 'light'>('dark');
+  const [studioLightOverride, setStudioLightOverride] = useState<'dark' | 'light' | null>(null);
+
+  // Sync studio stage light mode with website theme changes
+  useEffect(() => {
+    setStudioLightOverride(null);
+  }, [theme]);
+
+  const studioLight = studioLightOverride ?? theme;
+  const isDark = studioLight === 'dark';
 
   const activeCard = INITIAL_CARDS[selectedIndex];
   const utilPct = Math.round((activeCard.currentMonthSpend / activeCard.monthlyLimit) * 100);
@@ -37,49 +47,81 @@ export const InteractiveCardShowcase: React.FC = () => {
       {/* Left Column: Interactive Studio Stage (7 cols) */}
       <div
         className={`lg:col-span-7 rounded-3xl p-6 sm:p-8 border transition-colors duration-500 flex flex-col justify-between relative overflow-hidden ${
-          studioLight === 'dark'
+          isDark
             ? 'bg-[#0D1423] border-[#D6B878]/25 text-[#F5F2EA]'
-            : 'bg-gradient-to-br from-[#FFFFFF] via-[#FAF6EE] to-[#F3ECE0] border-[#D6B878]/30 text-[#0A0F1A] shadow-luxury-light'
+            : 'bg-gradient-to-br from-[#FCFAF6] via-[#F6F1E7] to-[#EEE5D6] border-[#D6B878]/35 text-[#0A0F1A] shadow-luxury-light ring-1 ring-[#D6B878]/20'
         }`}
       >
         <div
           className="absolute inset-0 pointer-events-none opacity-60"
           style={{
-            background:
-              studioLight === 'dark'
-                ? 'radial-gradient(circle at 50% 35%, rgba(214, 184, 120, 0.16), transparent 65%)'
-                : 'radial-gradient(circle at 50% 35%, rgba(179, 147, 82, 0.20), transparent 65%)',
+            background: isDark
+              ? 'radial-gradient(circle at 50% 35%, rgba(214, 184, 120, 0.16), transparent 65%)'
+              : 'radial-gradient(circle at 50% 45%, rgba(214, 184, 120, 0.22) 0%, rgba(246, 241, 231, 0.5) 45%, transparent 70%)',
           }}
           aria-hidden="true"
         />
 
         {/* Top Studio Toolbar */}
-        <div className="relative z-10 flex flex-wrap items-center justify-between gap-3 pb-4 border-b border-current/10">
-          <span className="inline-flex items-center gap-1.5 text-xs uppercase tracking-[0.2em] font-mono text-[#D6B878]">
-            <Sparkles className="w-3.5 h-3.5" /> 3D Card Studio
+        <div
+          className={`relative z-10 flex flex-wrap items-center justify-between gap-3 pb-4 border-b ${
+            isDark ? 'border-current/10' : 'border-[#0A0F1A]/10'
+          }`}
+        >
+          <span
+            className={`inline-flex items-center gap-1.5 text-xs uppercase tracking-[0.2em] font-mono font-medium ${
+              isDark ? 'text-[#D6B878]' : 'text-[#8C6D2B]'
+            }`}
+          >
+            <Sparkles className={`w-3.5 h-3.5 ${isDark ? 'text-[#D6B878]' : 'text-[#B39352]'}`} />{' '}
+            3D Card Studio
           </span>
 
           <div className="flex flex-wrap items-center gap-2">
             <button
               type="button"
               onClick={() => setIsFlipped((prev) => !prev)}
-              className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-medium border border-current/15 hover:border-[#D6B878] transition-colors"
+              className={`inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-medium border transition-colors ${
+                isDark
+                  ? 'border-current/15 hover:border-[#D6B878]'
+                  : 'bg-white/85 hover:bg-white text-[#0A0F1A] border-[#0A0F1A]/12 hover:border-[#D6B878] shadow-xs hover:shadow-sm'
+              }`}
             >
-              <RotateCw className={`w-3.5 h-3.5 transition-transform ${isFlipped ? 'rotate-180' : ''}`} />
+              <RotateCw
+                className={`w-3.5 h-3.5 ${
+                  isDark ? 'text-[#D6B878]' : 'text-[#9E7B35]'
+                } transition-transform ${isFlipped ? 'rotate-180' : ''}`}
+              />
               <span>{isFlipped ? 'Front' : 'Flip'}</span>
             </button>
 
             <button
               type="button"
               onClick={() => setRevealNumbers((prev) => !prev)}
-              className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-medium border border-current/15 hover:border-[#D6B878] transition-colors"
+              className={`inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-medium border transition-colors ${
+                isDark
+                  ? 'border-current/15 hover:border-[#D6B878]'
+                  : 'bg-white/85 hover:bg-white text-[#0A0F1A] border-[#0A0F1A]/12 hover:border-[#D6B878] shadow-xs hover:shadow-sm'
+              }`}
             >
-              {revealNumbers ? <EyeOff className="w-3.5 h-3.5" /> : <Eye className="w-3.5 h-3.5" />}
+              {revealNumbers ? (
+                <EyeOff
+                  className={`w-3.5 h-3.5 ${isDark ? 'text-[#D6B878]' : 'text-[#9E7B35]'}`}
+                />
+              ) : (
+                <Eye
+                  className={`w-3.5 h-3.5 ${isDark ? 'text-[#D6B878]' : 'text-[#9E7B35]'}`}
+                />
+              )}
               <span>{revealNumbers ? 'Mask' : 'Reveal'}</span>
             </button>
 
             <div
-              className="inline-flex items-center rounded-lg border border-current/15 p-0.5 text-xs"
+              className={`inline-flex items-center rounded-lg border p-0.5 text-xs ${
+                isDark
+                  ? 'border-current/15'
+                  : 'bg-[#EAE2D2]/90 border-[#0A0F1A]/12 shadow-inner'
+              }`}
               role="group"
               aria-label="Card preview scale"
             >
@@ -90,8 +132,10 @@ export const InteractiveCardShowcase: React.FC = () => {
                   onClick={() => setCardScale(sz)}
                   className={`px-2 py-1 rounded-md uppercase font-mono text-[10px] transition-colors ${
                     cardScale === sz
-                      ? 'bg-[#D6B878] text-[#080D18] font-semibold'
-                      : 'opacity-70 hover:opacity-100'
+                      ? 'bg-[#D6B878] text-[#080D18] font-semibold shadow-xs'
+                      : isDark
+                      ? 'opacity-70 hover:opacity-100'
+                      : 'text-[#5A6578] hover:text-[#0A0F1A] font-medium'
                   }`}
                 >
                   {sz}
@@ -101,14 +145,20 @@ export const InteractiveCardShowcase: React.FC = () => {
 
             <button
               type="button"
-              onClick={() => setStudioLight((prev) => (prev === 'dark' ? 'light' : 'dark'))}
-              className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-medium border border-current/15 hover:border-[#D6B878] transition-colors"
+              onClick={() =>
+                setStudioLightOverride((prev) => ((prev ?? theme) === 'dark' ? 'light' : 'dark'))
+              }
+              className={`inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-medium border transition-colors ${
+                isDark
+                  ? 'border-current/15 hover:border-[#D6B878]'
+                  : 'bg-white/85 hover:bg-white text-[#0A0F1A] border-[#0A0F1A]/12 hover:border-[#D6B878] shadow-xs hover:shadow-sm'
+              }`}
               title="Toggle studio lighting backdrop"
             >
-              {studioLight === 'dark' ? (
+              {isDark ? (
                 <Sun className="w-3.5 h-3.5 text-[#D6B878]" />
               ) : (
-                <Moon className="w-3.5 h-3.5" />
+                <Moon className="w-3.5 h-3.5 text-[#8C6D2B]" />
               )}
             </button>
           </div>
@@ -132,7 +182,11 @@ export const InteractiveCardShowcase: React.FC = () => {
         </div>
 
         {/* Bottom Variant Selector */}
-        <div className="relative z-10 grid grid-cols-2 sm:grid-cols-4 gap-2.5 pt-4 border-t border-current/10">
+        <div
+          className={`relative z-10 grid grid-cols-2 sm:grid-cols-4 gap-2.5 pt-4 border-t ${
+            isDark ? 'border-current/10' : 'border-[#0A0F1A]/10'
+          }`}
+        >
           {INITIAL_CARDS.map((card, idx) => {
             const selected = idx === selectedIndex;
             const swatchColors: Record<string, string> = {
@@ -151,8 +205,12 @@ export const InteractiveCardShowcase: React.FC = () => {
                 }}
                 className={`flex items-center gap-2.5 p-2.5 rounded-xl border text-left transition-all ${
                   selected
-                    ? 'border-[#D6B878] bg-[#D6B878]/15 shadow-sm'
-                    : 'border-current/10 hover:border-current/30 opacity-75 hover:opacity-100'
+                    ? isDark
+                      ? 'border-[#D6B878] bg-[#D6B878]/15 shadow-sm'
+                      : 'border-[#D6B878] bg-[#D6B878]/25 shadow-sm ring-1 ring-[#D6B878]/40'
+                    : isDark
+                    ? 'border-current/10 hover:border-current/30 opacity-75 hover:opacity-100'
+                    : 'border-[#0A0F1A]/10 bg-white/70 hover:bg-white hover:border-[#D6B878]/50 shadow-xs text-[#5A6578] hover:text-[#0A0F1A]'
                 }`}
               >
                 <span
@@ -161,8 +219,20 @@ export const InteractiveCardShowcase: React.FC = () => {
                   }`}
                 />
                 <div className="min-w-0">
-                  <p className="text-xs font-semibold truncate">{card.name}</p>
-                  <p className="text-[10px] opacity-65 font-mono">•••• {card.lastFour}</p>
+                  <p
+                    className={`text-xs font-semibold truncate ${
+                      isDark ? 'text-[#F5F2EA]' : 'text-[#0A0F1A]'
+                    }`}
+                  >
+                    {card.name}
+                  </p>
+                  <p
+                    className={`text-[10px] font-mono ${
+                      isDark ? 'opacity-65' : 'text-[#6E7A8E]'
+                    }`}
+                  >
+                    •••• {card.lastFour}
+                  </p>
                 </div>
               </button>
             );
