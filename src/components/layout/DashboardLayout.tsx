@@ -208,7 +208,7 @@ export const DashboardLayout: React.FC = () => {
       {/* MAIN CONTENT SHELL */}
       <div className="flex-1 flex flex-col min-w-0">
         {/* TOP HEADER BAR */}
-        <header className="sticky top-0 z-40 bg-[#F5F2EA]/90 dark:bg-[#080D18]/90 backdrop-blur-xl border-b border-[#080D18]/10 dark:border-[#F5F2EA]/10 px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between gap-3">
+        <header className="sticky top-0 z-40 bg-[#FAF8F5]/90 dark:bg-[#080D18]/90 backdrop-blur-xl border-b border-[#D6B878]/25 dark:border-[#F5F2EA]/10 px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between gap-3">
           {/* Left: Mobile Menu Button + Account Switcher */}
           <div className="flex items-center gap-3">
             <button
@@ -229,7 +229,7 @@ export const DashboardLayout: React.FC = () => {
                 id="global-account-switcher"
                 value={selectedAccountId}
                 onChange={(e) => setSelectedAccountId(e.target.value)}
-                className="px-3 py-1.5 rounded-xl text-xs sm:text-sm font-medium bg-white dark:bg-[#141D2D] border border-[#080D18]/15 dark:border-[#D6B878]/30 text-[#080D18] dark:text-[#F5F2EA] focus:outline-none focus:border-[#D6B878] max-w-[210px] sm:max-w-xs truncate"
+                className="px-3 py-1.5 rounded-xl text-xs sm:text-sm font-medium bg-white dark:bg-[#141D2D] border border-[#D6B878]/30 dark:border-[#D6B878]/30 text-[#0A0F1A] dark:text-[#F5F2EA] focus:outline-none focus:border-[#D6B878] max-w-[210px] sm:max-w-xs truncate shadow-sm dark:shadow-none"
               >
                 <option value="all">
                   All Accounts ({formatCurrency(totalAvailableBalance, { masked: balancesMasked, currency: profile.preferredCurrency })})
@@ -255,12 +255,12 @@ export const DashboardLayout: React.FC = () => {
                 onChange={(e) => setSearchQuery(e.target.value)}
                 placeholder="Search merchants, categories, or press ⌘K..."
                 aria-label="Search transactions"
-                className="w-full pl-9 pr-14 py-1.5 rounded-xl text-xs bg-white dark:bg-[#141D2D] border border-[#080D18]/10 dark:border-[#F5F2EA]/10 focus:outline-none focus:border-[#D6B878]"
+                className="w-full pl-9 pr-14 py-1.5 rounded-xl text-xs bg-white dark:bg-[#141D2D] border border-[#D6B878]/30 dark:border-[#F5F2EA]/10 focus:outline-none focus:border-[#D6B878] shadow-sm dark:shadow-none"
               />
               <button
                 type="button"
                 onClick={() => setCmdOpen(true)}
-                className="absolute right-2 px-1.5 py-0.5 text-[10px] font-mono rounded bg-[#F5F2EA] dark:bg-[#0D1423] text-[#B39352] dark:text-[#D6B878] border border-current/15 hover:border-[#D6B878]"
+                className="absolute right-2 px-1.5 py-0.5 text-[10px] font-mono rounded bg-[#F8F5EE] dark:bg-[#0D1423] text-[#9E7B35] dark:text-[#D6B878] border border-current/15 hover:border-[#D6B878]"
                 title="Open Command Palette (⌘K)"
               >
                 ⌘K
@@ -268,7 +268,7 @@ export const DashboardLayout: React.FC = () => {
             </div>
 
             {searchFocused && searchQuery.trim().length > 0 && (
-              <div className="absolute left-0 right-0 top-full mt-2 rounded-2xl bg-white dark:bg-[#141D2D] border border-[#080D18]/15 dark:border-[#D6B878]/30 shadow-luxury p-3 z-50 space-y-2">
+              <div className="absolute left-0 right-0 top-full mt-2 rounded-2xl bg-white dark:bg-[#141D2D] border border-[#D6B878]/30 dark:border-[#D6B878]/30 shadow-luxury-light dark:shadow-luxury p-3 z-50 space-y-2">
                 <div className="flex items-center justify-between px-2 text-[10px] font-mono uppercase tracking-wider text-[#6E7A8E] dark:text-[#929DB0]">
                   <span>Matching Ledger Records</span>
                   <span>{searchResults.length} found</span>
