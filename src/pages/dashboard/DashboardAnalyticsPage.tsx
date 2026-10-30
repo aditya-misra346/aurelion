@@ -28,6 +28,7 @@ import {
 
 export const DashboardAnalyticsPage: React.FC = () => {
   const {
+    theme,
     transactions,
     budgets,
     monthlyIncome,
