@@ -11,7 +11,7 @@ export const PublicLayout: React.FC = () => {
   const [showBackToTop, setShowBackToTop] = useState(false);
 
   useEffect(() => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+    window.scrollTo(0, 0);
   }, [pathname]);
 
   useEffect(() => {
@@ -37,7 +37,9 @@ export const PublicLayout: React.FC = () => {
     <div className="min-h-screen flex flex-col pb-9 bg-[#FAF8F5] dark:bg-[#080D18] text-[#0A0F1A] dark:text-[#F5F2EA] selection:bg-[#D6B878]/30">
       <PublicNavbar onOpenCommandPalette={() => setCmdOpen(true)} />
       <main className="flex-1">
-        <Outlet />
+        <div key={pathname} className="page-transition-enter">
+          <Outlet />
+        </div>
       </main>
       <PublicFooter />
 
@@ -47,7 +49,7 @@ export const PublicLayout: React.FC = () => {
           type="button"
           onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
           aria-label="Scroll back to top"
-          className="fixed bottom-12 right-6 z-40 p-3 rounded-2xl bg-white dark:bg-[#0D1423] text-[#9E7B35] dark:text-[#D6B878] border border-[#D6B878]/35 shadow-luxury-light dark:shadow-luxury hover:bg-[#F3EFE6] dark:hover:bg-[#141D2D] hover:scale-105 transition-all"
+          className="fixed bottom-12 right-6 z-40 p-3 rounded-2xl bg-white dark:bg-[#0D1423] text-[#9E7B35] dark:text-[#D6B878] border border-[#D6B878]/35 shadow-luxury-light dark:shadow-luxury hover:bg-[#F3EFE6] dark:hover:bg-[#141D2D] hover:scale-105 active:scale-95 transition-all duration-200 animate-in fade-in"
         >
           <ArrowUp className="w-4 h-4" />
         </button>
