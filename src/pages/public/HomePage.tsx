@@ -199,7 +199,7 @@ export const HomePage: React.FC = () => {
 
             {/* Right 6 Cols: Interactive Terminal Card Preview */}
             <div className="lg:col-span-6">
-              <div className="rounded-3xl bg-white dark:bg-[#141D2D] border border-[#080D18]/10 dark:border-[#D6B878]/30 p-6 shadow-luxury space-y-5">
+              <div className="rounded-3xl bg-white dark:bg-[#141D2D] border border-[#080D18]/10 dark:border-[#D6B878]/30 p-4 sm:p-6 shadow-luxury space-y-4 sm:space-y-5">
                 <div className="flex items-center justify-between border-b border-[#080D18]/10 dark:border-[#F5F2EA]/10 pb-3.5">
                   <div>
                     <span className="text-[10px] font-mono uppercase tracking-[0.18em] text-[#6E7A8E] dark:text-[#929DB0] block">
@@ -219,17 +219,19 @@ export const HomePage: React.FC = () => {
                   </div>
                 </div>
 
-                <PhysicalCardPreview
-                  variant="obsidian"
-                  cardholderName="JULIAN V. STERLING"
-                  maskedNumber="4819 •••• •••• 9042"
-                  lastFour="9042"
-                  expiryDate="09/29"
-                  tierLabel="PRIVATE CLIENT EDITION"
-                  scale="md"
-                />
+                <div className="py-0.5 sm:py-1">
+                  <PhysicalCardPreview
+                    variant="obsidian"
+                    cardholderName="JULIAN V. STERLING"
+                    maskedNumber="4819 •••• •••• 9042"
+                    lastFour="9042"
+                    expiryDate="09/29"
+                    tierLabel="PRIVATE CLIENT EDITION"
+                    scale="md"
+                  />
+                </div>
 
-                <div className="grid grid-cols-2 gap-3">
+                <div className="grid grid-cols-2 gap-2.5 sm:gap-3">
                   <div className="p-3.5 rounded-2xl bg-[#F5F2EA] dark:bg-[#0D1423] border border-current/5">
                     <div className="flex items-center justify-between text-xs">
                       <span className="text-[#6E7A8E] dark:text-[#929DB0]">6M Net Flow</span>
