@@ -153,7 +153,7 @@ export const PublicNavbar: React.FC<PublicNavbarProps> = ({ onOpenCommandPalette
                               {item.title}
                             </span>
                             {item.badge && (
-                              <span className="text-[11px] font-mono uppercase tracking-wider px-1.5 py-0.5 rounded bg-[#D6B878]/15 text-[#B39352] dark:text-[#D6B878]">
+                              <span className="text-[10px] font-mono uppercase tracking-wider px-1.5 py-0.5 rounded bg-[#D6B878]/15 text-[#B39352] dark:text-[#D6B878]">
                                 {item.badge}
                               </span>
                             )}
@@ -210,7 +210,7 @@ export const PublicNavbar: React.FC<PublicNavbarProps> = ({ onOpenCommandPalette
             >
               <Search className="w-3.5 h-3.5 text-[#D6B878]" />
               <span>Quick Jump</span>
-              <kbd className="px-1.5 py-0.5 text-[11px] font-mono rounded bg-[#080D18]/5 dark:bg-[#0D1423] border border-current/15">
+              <kbd className="px-1.5 py-0.5 text-[10px] font-mono rounded bg-[#080D18]/5 dark:bg-[#0D1423] border border-current/15">
                 ⌘K
               </kbd>
             </button>
