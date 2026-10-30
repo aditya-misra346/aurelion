@@ -132,13 +132,13 @@ export const DashboardAccountsPage: React.FC = () => {
               onClick={() => setActiveAccId(acc.id)}
               className={`text-left rounded-3xl p-6 border transition-all flex flex-col justify-between ${
                 isSelected
-                  ? 'bg-[#0D1423] text-[#F5F2EA] border-[#D6B878] shadow-luxury'
-                  : 'bg-white dark:bg-[#141D2D] border-[#080D18]/10 dark:border-[#F5F2EA]/10 hover:border-[#D6B878]/50'
+                  ? 'bg-gradient-to-br from-[#FFFFFF] via-[#FDFBF7] to-[#F5EFE4] text-[#0A0F1A] border-[#D6B878] shadow-luxury-light ring-1 ring-[#D6B878]/40 dark:ring-0 dark:bg-[#0D1423] dark:text-[#F5F2EA] dark:border-[#D6B878] dark:shadow-luxury'
+                  : 'bg-white dark:bg-[#141D2D] border-[#0A0F1A]/10 dark:border-[#F5F2EA]/10 hover:border-[#D6B878]/50 shadow-sm dark:shadow-none'
               }`}
             >
               <div className="space-y-2">
                 <div className="flex items-center justify-between">
-                  <span className="text-[10px] font-mono uppercase tracking-widest text-[#D6B878]">
+                  <span className="text-[10px] font-mono uppercase tracking-widest text-[#9E7B35] dark:text-[#D6B878]">
                     {acc.type}
                   </span>
                   <span className="text-xs font-mono opacity-75">{acc.accountNumberMasked}</span>
