@@ -364,7 +364,7 @@ export const DashboardLayout: React.FC = () => {
               </button>
 
               {notifOpen && (
-                <div className="absolute right-0 mt-2 w-80 sm:w-96 rounded-2xl bg-white dark:bg-[#141D2D] border border-[#080D18]/15 dark:border-[#D6B878]/35 shadow-luxury z-50 overflow-hidden animate-in fade-in slide-in-from-top-2">
+                <div className="absolute right-0 mt-2 w-80 sm:w-96 rounded-2xl bg-white dark:bg-[#141D2D] border border-[#080D18]/15 dark:border-[#D6B878]/35 shadow-luxury z-50 overflow-hidden animate-in fade-in slide-in-from-top-2 duration-200 ease-out">
                   <div className="p-4 border-b border-current/10 flex items-center justify-between">
                     <div>
                       <h3 className="text-sm font-semibold">Client Alert Center</h3>
