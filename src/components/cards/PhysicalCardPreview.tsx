@@ -159,7 +159,7 @@ export const PhysicalCardPreview: React.FC<PhysicalCardPreviewProps> = ({
         {/* FRONT OF CARD */}
         <div
           className={`absolute inset-0 w-full h-full rounded-2xl ${
-            isSm ? 'p-3 sm:p-3.5' : 'p-3 min-[380px]:p-3.5 sm:p-6'
+            isSm ? 'p-2.5 min-[360px]:p-3 sm:p-3.5' : 'p-2.5 min-[360px]:p-3 min-[400px]:p-3.5 sm:p-6'
           } flex flex-col justify-between backface-hidden border ${style.frontBg} ${style.border}`}
           style={{
             transform: 'rotateY(0deg) translateZ(1px)',
@@ -190,8 +190,8 @@ export const PhysicalCardPreview: React.FC<PhysicalCardPreviewProps> = ({
                 <span
                   className={`font-serif font-semibold ${
                     isSm
-                      ? 'tracking-[0.2em] sm:tracking-[0.22em] text-[11px] sm:text-xs'
-                      : 'tracking-[0.2em] sm:tracking-[0.26em] text-xs sm:text-base'
+                      ? 'tracking-[0.18em] sm:tracking-[0.22em] text-[10.5px] min-[360px]:text-[11px] sm:text-xs'
+                      : 'tracking-[0.18em] sm:tracking-[0.26em] text-[11px] min-[360px]:text-xs sm:text-base'
                   } ${style.textPrimary}`}
                 >
                   AURELION
@@ -200,8 +200,8 @@ export const PhysicalCardPreview: React.FC<PhysicalCardPreviewProps> = ({
               <span
                 className={`block ${
                   isSm
-                    ? 'text-[7px] sm:text-[7.5px] tracking-[0.16em] sm:tracking-[0.18em]'
-                    : 'text-[7.5px] sm:text-[9px] tracking-[0.18em] sm:tracking-[0.22em]'
+                    ? 'text-[6.5px] min-[360px]:text-[7px] sm:text-[7.5px] tracking-[0.14em] sm:tracking-[0.18em]'
+                    : 'text-[7px] min-[360px]:text-[7.5px] sm:text-[9px] tracking-[0.16em] sm:tracking-[0.22em]'
                 } uppercase mt-0.5 font-medium ${style.textSecondary}`}
               >
                 {tierLabel}
@@ -213,8 +213,8 @@ export const PhysicalCardPreview: React.FC<PhysicalCardPreviewProps> = ({
                 <span
                   className={`inline-flex items-center gap-1 ${
                     isSm
-                      ? 'px-1.5 py-0.2 text-[7.5px] sm:text-[8px]'
-                      : 'px-1.5 sm:px-2 py-0.2 sm:py-0.5 text-[8px] sm:text-[10px]'
+                      ? 'px-1.5 py-0.2 text-[7px] sm:text-[8px]'
+                      : 'px-1.5 sm:px-2 py-0.2 sm:py-0.5 text-[7.5px] sm:text-[10px]'
                   } rounded-full font-medium bg-[#FF7777]/20 text-[#FF7777] border border-[#FF7777]/40`}
                 >
                   <Lock className={isSm ? 'w-2 sm:w-2.5 h-2 sm:h-2.5' : 'w-2.5 sm:w-3 h-2.5 sm:h-3'} /> Locked
@@ -222,7 +222,7 @@ export const PhysicalCardPreview: React.FC<PhysicalCardPreviewProps> = ({
               )}
               <Wifi
                 className={`${
-                  isSm ? 'w-3.5 sm:w-4 h-3.5 sm:h-4' : 'w-4 sm:w-5 h-4 sm:h-5'
+                  isSm ? 'w-3.5 sm:w-4 h-3.5 sm:h-4' : 'w-3.5 sm:w-5 h-3.5 sm:h-5'
                 } rotate-90 opacity-75 ${style.textPrimary}`}
                 aria-label="Contactless enabled"
               />
@@ -231,13 +231,13 @@ export const PhysicalCardPreview: React.FC<PhysicalCardPreviewProps> = ({
 
           {/* Middle Row: Precision EMV Chip & Number */}
           <div className={`relative z-10 my-auto ${isSm ? 'py-0' : 'py-0 sm:py-1'}`}>
-            <div className={`flex items-center justify-between ${isSm ? 'mb-1 sm:mb-2' : 'mb-1.5 sm:mb-4'}`}>
+            <div className={`flex items-center justify-between ${isSm ? 'mb-1 sm:mb-2' : 'mb-1 sm:mb-4'}`}>
               {/* Precision Metallic EMV Chip */}
               <div
                 className={`${
                   isSm
-                    ? 'w-7 sm:w-8 h-5 sm:h-6 rounded'
-                    : 'w-7 min-[380px]:w-8 sm:w-11 h-5 min-[380px]:h-6 sm:h-8 rounded sm:rounded-md'
+                    ? 'w-6.5 min-[360px]:w-7 sm:w-8 h-4.5 min-[360px]:h-5 sm:h-6 rounded'
+                    : 'w-6.5 min-[360px]:w-7 min-[380px]:w-8 sm:w-11 h-4.5 min-[360px]:h-5 min-[380px]:h-6 sm:h-8 rounded sm:rounded-md'
                 } bg-gradient-to-br ${
                   style.chipColor
                 } border border-black/20 shadow-inner relative overflow-hidden flex items-center justify-center`}
@@ -249,16 +249,16 @@ export const PhysicalCardPreview: React.FC<PhysicalCardPreviewProps> = ({
                 <div
                   className={`${
                     isSm
-                      ? 'w-2.5 sm:w-3 h-2 rounded-[1px]'
-                      : 'w-2.5 min-[380px]:w-3 sm:w-4 h-2 min-[380px]:h-2 sm:h-3 rounded-[1px] sm:rounded-[2px]'
+                      ? 'w-2 min-[360px]:w-2.5 sm:w-3 h-1.5 min-[360px]:h-2 rounded-[1px]'
+                      : 'w-2 min-[360px]:w-2.5 min-[380px]:w-3 sm:w-4 h-1.5 min-[360px]:h-2 min-[380px]:h-2 sm:h-3 rounded-[1px] sm:rounded-[2px]'
                   } border border-black/30`}
                 />
               </div>
               <span
                 className={`${
                   isSm
-                    ? 'text-[7px] sm:text-[8px] px-1 sm:px-1.5 py-0.5'
-                    : 'text-[7.5px] min-[380px]:text-[8px] sm:text-[10px] px-1.5 sm:px-2 py-0.5'
+                    ? 'text-[6.5px] min-[360px]:text-[7px] sm:text-[8px] px-1 sm:px-1.5 py-0.5'
+                    : 'text-[6.5px] min-[360px]:text-[7.5px] min-[380px]:text-[8px] sm:text-[10px] px-1 min-[360px]:px-1.5 sm:px-2 py-0.5'
                 } font-mono uppercase tracking-widest rounded border ${style.badgeBg}`}
               >
                 SAMPLE • DEMO
@@ -268,8 +268,8 @@ export const PhysicalCardPreview: React.FC<PhysicalCardPreviewProps> = ({
             <p
               className={`font-mono ${
                 isSm
-                  ? 'text-[11px] sm:text-xs tracking-[0.11em] sm:tracking-[0.14em]'
-                  : 'text-[11.5px] min-[380px]:text-xs sm:text-base md:text-lg tracking-[0.11em] min-[380px]:tracking-[0.14em] sm:tracking-[0.18em]'
+                  ? 'text-[10.5px] min-[360px]:text-[11px] sm:text-xs tracking-[0.09em] min-[360px]:tracking-[0.11em] sm:tracking-[0.14em]'
+                  : 'text-[11px] min-[360px]:text-[11.5px] min-[380px]:text-xs sm:text-base md:text-lg tracking-[0.09em] min-[360px]:tracking-[0.11em] min-[380px]:tracking-[0.14em] sm:tracking-[0.18em]'
               } font-medium tabular-nums whitespace-nowrap overflow-hidden text-ellipsis ${style.textPrimary}`}
             >
               {displayCardNumber}
@@ -284,12 +284,12 @@ export const PhysicalCardPreview: React.FC<PhysicalCardPreviewProps> = ({
                 : 'gap-1.5 min-[380px]:gap-2 sm:gap-4 pt-1'
             } border-t border-current/10 min-w-0`}
           >
-            <div className="min-w-0">
+            <div className="min-w-0 flex-1 pr-1">
               <span
                 className={`block ${
                   isSm
-                    ? 'text-[6.5px] sm:text-[7px] tracking-[0.14em] sm:tracking-[0.16em]'
-                    : 'text-[6.5px] min-[380px]:text-[7px] sm:text-[8px] tracking-[0.14em] sm:tracking-[0.2em]'
+                    ? 'text-[6px] min-[360px]:text-[6.5px] sm:text-[7px] tracking-[0.12em] min-[360px]:tracking-[0.14em] sm:tracking-[0.16em]'
+                    : 'text-[6px] min-[360px]:text-[6.5px] min-[380px]:text-[7px] sm:text-[8px] tracking-[0.12em] min-[360px]:tracking-[0.14em] sm:tracking-[0.2em]'
                 } uppercase ${style.textSecondary}`}
               >
                 Cardholder
@@ -297,9 +297,10 @@ export const PhysicalCardPreview: React.FC<PhysicalCardPreviewProps> = ({
               <span
                 className={`block ${
                   isSm
-                    ? 'text-[9px] min-[360px]:text-[10px] tracking-[0.08em] sm:tracking-[0.1em]'
-                    : 'text-[9.5px] min-[360px]:text-[10.5px] min-[400px]:text-[11.5px] sm:text-sm tracking-[0.08em] min-[380px]:tracking-[0.1em] sm:tracking-[0.14em]'
-                } font-medium uppercase whitespace-nowrap ${style.textPrimary}`}
+                    ? 'text-[8.5px] min-[360px]:text-[9px] min-[400px]:text-[10px] sm:text-[10px] tracking-[0.05em] min-[360px]:tracking-[0.08em] sm:tracking-[0.1em]'
+                    : 'text-[8.5px] min-[360px]:text-[9.5px] min-[400px]:text-[10.5px] sm:text-sm tracking-[0.05em] min-[360px]:tracking-[0.08em] min-[380px]:tracking-[0.1em] sm:tracking-[0.14em]'
+                } font-medium uppercase whitespace-nowrap truncate ${style.textPrimary}`}
+                title={cardholderName}
               >
                 {cardholderName}
               </span>
@@ -307,24 +308,24 @@ export const PhysicalCardPreview: React.FC<PhysicalCardPreviewProps> = ({
 
             <div
               className={`flex items-end ${
-                isSm ? 'gap-2 sm:gap-3' : 'gap-2 min-[380px]:gap-3 sm:gap-5'
+                isSm ? 'gap-1.5 min-[360px]:gap-2 sm:gap-3' : 'gap-1.5 min-[360px]:gap-2 min-[380px]:gap-3 sm:gap-5'
               } shrink-0`}
             >
               <div>
                 <span
                   className={`block ${
                     isSm
-                      ? 'text-[6.5px] sm:text-[7px] tracking-[0.14em] sm:tracking-[0.16em]'
-                      : 'text-[6.5px] min-[380px]:text-[7px] sm:text-[8px] tracking-[0.14em] sm:tracking-[0.2em]'
-                  } uppercase ${style.textSecondary}`}
-                >
-                  Valid Thru
-                </span>
+                      ? 'text-[6px] min-[360px]:text-[6.5px] sm:text-[7px] tracking-[0.12em] min-[360px]:tracking-[0.14em] sm:tracking-[0.16em]'
+                      : 'text-[6px] min-[360px]:text-[6.5px] min-[380px]:text-[7px] sm:text-[8px] tracking-[0.12em] min-[360px]:tracking-[0.14em] sm:tracking-[0.2em]'
+                } uppercase ${style.textSecondary}`}
+              >
+                Valid Thru
+              </span>
                 <span
                   className={`font-mono ${
                     isSm
-                      ? 'text-[9px] min-[360px]:text-[10px]'
-                      : 'text-[9.5px] min-[360px]:text-[10.5px] min-[400px]:text-[11.5px] sm:text-sm'
+                      ? 'text-[8.5px] min-[360px]:text-[9px] sm:text-[10px]'
+                      : 'text-[8.5px] min-[360px]:text-[9.5px] min-[400px]:text-[10.5px] sm:text-sm'
                   } tabular-nums whitespace-nowrap ${style.textPrimary}`}
                 >
                   {expiryDate}
@@ -334,8 +335,8 @@ export const PhysicalCardPreview: React.FC<PhysicalCardPreviewProps> = ({
                 <span
                   className={`${
                     isSm
-                      ? 'text-[7.5px] min-[360px]:text-[8.5px] tracking-[0.12em] sm:tracking-[0.14em]'
-                      : 'text-[7.5px] min-[360px]:text-[8.5px] min-[400px]:text-[9.5px] sm:text-[10px] tracking-[0.12em] sm:tracking-[0.18em]'
+                      ? 'text-[7px] min-[360px]:text-[7.5px] sm:text-[8.5px] tracking-[0.1em] min-[360px]:tracking-[0.12em] sm:tracking-[0.14em]'
+                      : 'text-[7px] min-[360px]:text-[7.5px] min-[400px]:text-[8.5px] sm:text-[10px] tracking-[0.1em] min-[360px]:tracking-[0.12em] min-[380px]:tracking-[0.14em] sm:tracking-[0.18em]'
                   } font-serif font-semibold uppercase whitespace-nowrap ${style.accentColor}`}
                 >
                   {network === 'AURELION PRIVATE' ? 'PRIVATE' : 'INFINITE'}
@@ -365,8 +366,8 @@ export const PhysicalCardPreview: React.FC<PhysicalCardPreviewProps> = ({
             <div
               className={`w-full ${
                 isSm
-                  ? 'h-6 sm:h-8 mt-2 sm:mt-3'
-                  : 'h-6 min-[380px]:h-7 sm:h-11 mt-2 min-[380px]:mt-3 sm:mt-5'
+                  ? 'h-5 min-[360px]:h-6 sm:h-8 mt-2 sm:mt-3'
+                  : 'h-5 min-[360px]:h-6 min-[380px]:h-7 sm:h-11 mt-2 min-[380px]:mt-3 sm:mt-5'
               } bg-[#05070C] opacity-90`}
             />
           </div>
@@ -375,8 +376,8 @@ export const PhysicalCardPreview: React.FC<PhysicalCardPreviewProps> = ({
           <div
             className={`w-full ${
               isSm
-                ? 'h-6 sm:h-8 mt-2 sm:mt-3'
-                : 'h-6 min-[380px]:h-7 sm:h-11 mt-2 min-[380px]:mt-3 sm:mt-5'
+                ? 'h-5 min-[360px]:h-6 sm:h-8 mt-2 sm:mt-3'
+                : 'h-5 min-[360px]:h-6 min-[380px]:h-7 sm:h-11 mt-2 min-[380px]:mt-3 sm:mt-5'
             } pointer-events-none invisible`}
             aria-hidden="true"
           />
@@ -385,8 +386,8 @@ export const PhysicalCardPreview: React.FC<PhysicalCardPreviewProps> = ({
           <div
             className={`relative z-10 ${
               isSm
-                ? 'px-3 sm:px-3.5 space-y-1 sm:space-y-1.5'
-                : 'px-3 min-[380px]:px-4 sm:px-6 space-y-1 min-[380px]:space-y-1.5 sm:space-y-3'
+                ? 'px-2.5 min-[360px]:px-3 sm:px-3.5 space-y-1 sm:space-y-1.5'
+                : 'px-2.5 min-[360px]:px-3 min-[380px]:px-4 sm:px-6 space-y-1 min-[380px]:space-y-1.5 sm:space-y-3'
             } my-auto`}
           >
             <div
@@ -397,15 +398,15 @@ export const PhysicalCardPreview: React.FC<PhysicalCardPreviewProps> = ({
               <div
                 className={`flex-1 ${
                   isSm
-                    ? 'h-5 sm:h-6.5 px-1.5 sm:px-2'
-                    : 'h-5 min-[380px]:h-6 sm:h-8 px-1.5 min-[380px]:px-2 sm:px-3'
+                    ? 'h-5.5 min-[360px]:h-6 sm:h-6.5 px-1.5 sm:px-2'
+                    : 'h-5.5 min-[360px]:h-6 sm:h-8 px-1.5 min-[380px]:px-2 sm:px-3'
                 } rounded bg-white/15 backdrop-blur-sm border border-white/20 flex items-center justify-between min-w-0`}
               >
                 <span
                   className={`font-serif italic ${
                     isSm
-                      ? 'text-[8.5px] sm:text-[10px]'
-                      : 'text-[9px] min-[380px]:text-[10px] sm:text-xs'
+                      ? 'text-[8px] min-[360px]:text-[8.5px] sm:text-[10px]'
+                      : 'text-[8.5px] min-[360px]:text-[9px] min-[380px]:text-[10px] sm:text-xs'
                   } tracking-wider opacity-75 text-white truncate`}
                 >
                   Julian V. Sterling
@@ -413,8 +414,8 @@ export const PhysicalCardPreview: React.FC<PhysicalCardPreviewProps> = ({
                 <span
                   className={`${
                     isSm
-                      ? 'text-[6.5px] sm:text-[7.5px]'
-                      : 'text-[7px] min-[380px]:text-[7.5px] sm:text-[9px]'
+                      ? 'text-[6px] min-[360px]:text-[6.5px] sm:text-[7.5px]'
+                      : 'text-[6px] min-[360px]:text-[7px] min-[380px]:text-[7.5px] sm:text-[9px]'
                   } uppercase tracking-widest text-white/60 shrink-0 ml-1`}
                 >
                   Demo Signature
@@ -423,24 +424,24 @@ export const PhysicalCardPreview: React.FC<PhysicalCardPreviewProps> = ({
               <div
                 className={`${
                   isSm
-                    ? 'px-1.5 sm:px-2.5 h-5 sm:h-6.5'
-                    : 'px-1.5 min-[380px]:px-2.5 sm:px-3 h-5 min-[380px]:h-6 sm:h-8'
-                } rounded bg-[#080D18]/85 border border-[#D6B878]/40 flex flex-col items-center justify-center shrink-0 leading-none`}
+                    ? 'px-1.5 sm:px-2.5 h-5.5 min-[360px]:h-6 sm:h-6.5'
+                    : 'px-1.5 min-[380px]:px-2.5 sm:px-3 h-5.5 min-[360px]:h-6 sm:h-8'
+                } rounded bg-[#080D18]/85 border border-[#D6B878]/40 flex flex-col items-center justify-center shrink-0 leading-none min-w-[28px] min-[360px]:min-w-[32px] sm:min-w-[42px]`}
               >
                 <span
                   className={`block uppercase font-mono font-medium tracking-[0.14em] text-[#D6B878]/70 ${
                     isSm
-                      ? 'text-[5.5px] sm:text-[6.5px] mb-0.5'
-                      : 'text-[5.5px] min-[380px]:text-[6px] sm:text-[7px] mb-0.5'
-                  }`}
+                      ? 'text-[5px] min-[360px]:text-[5.5px] sm:text-[6.5px] mb-0.5'
+                      : 'text-[5px] min-[360px]:text-[5.5px] min-[380px]:text-[6px] sm:text-[7px] mb-0.5'
+                  } leading-none`}
                 >
                   CVV
                 </span>
                 <span
                   className={`font-mono text-[#D6B878] tracking-widest leading-none ${
                     isSm
-                      ? 'text-[8.5px] sm:text-[10px]'
-                      : 'text-[9px] min-[380px]:text-[10px] sm:text-xs'
+                      ? 'text-[8px] min-[360px]:text-[8.5px] sm:text-[10px]'
+                      : 'text-[8px] min-[360px]:text-[9px] min-[380px]:text-[10px] sm:text-xs'
                   }`}
                 >
                   {revealNumbers ? '842' : '•••'}
@@ -450,8 +451,8 @@ export const PhysicalCardPreview: React.FC<PhysicalCardPreviewProps> = ({
             <p
               className={`${
                 isSm
-                  ? 'text-[6.5px] sm:text-[7.5px] leading-tight line-clamp-2'
-                  : 'text-[7px] min-[380px]:text-[7.5px] sm:text-[9px] leading-tight sm:leading-relaxed line-clamp-2 sm:line-clamp-none'
+                  ? 'text-[6px] min-[360px]:text-[6.5px] sm:text-[7.5px] leading-tight line-clamp-2'
+                  : 'text-[6px] min-[360px]:text-[7px] min-[380px]:text-[7.5px] sm:text-[9px] leading-tight sm:leading-relaxed line-clamp-2 sm:line-clamp-none'
               } ${style.textSecondary}`}
             >
               ILLUSTRATIVE DEMONSTRATION INSTRUMENT • NOT A VALID PAYMENT CARD. Issued by Aurelion
@@ -463,15 +464,15 @@ export const PhysicalCardPreview: React.FC<PhysicalCardPreviewProps> = ({
           <div
             className={`relative z-10 ${
               isSm
-                ? 'px-3 sm:px-3.5 pb-2 sm:pb-2.5 text-[7px] sm:text-[8.5px]'
-                : 'px-3 min-[380px]:px-4 sm:px-6 pb-2 min-[380px]:pb-2.5 sm:pb-5 text-[7.5px] min-[380px]:text-[8.5px] sm:text-[10px]'
+                ? 'px-2.5 min-[360px]:px-3 sm:px-3.5 pb-2 sm:pb-2.5 text-[6.5px] min-[360px]:text-[7px] sm:text-[8.5px]'
+                : 'px-2.5 min-[360px]:px-3 min-[380px]:px-4 sm:px-6 pb-2 min-[380px]:pb-2.5 sm:pb-5 text-[6.5px] min-[360px]:text-[7.5px] min-[380px]:text-[8.5px] sm:text-[10px]'
             } flex items-center justify-between`}
           >
             <span className={`font-mono ${style.textSecondary}`}>
               ID: AURL-{lastFour}-SIM
             </span>
             <span
-              className={`uppercase tracking-[0.14em] sm:tracking-[0.2em] font-serif ${style.textPrimary}`}
+              className={`uppercase tracking-[0.12em] min-[360px]:tracking-[0.14em] sm:tracking-[0.2em] font-serif ${style.textPrimary}`}
             >
               AURELION • ZURICH • NEW YORK
             </span>
