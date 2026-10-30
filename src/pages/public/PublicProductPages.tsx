@@ -294,13 +294,13 @@ export const PublicAccountsPage: React.FC = () => {
       </div>
 
       {/* Interactive Reserve Compounding Calculator with Live AreaChart */}
-      <div className="rounded-3xl p-6 sm:p-10 bg-[#0D1423] text-[#F5F2EA] border border-[#D6B878]/30 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+      <div className="rounded-3xl p-6 sm:p-10 bg-gradient-to-br from-[#FFFFFF] via-[#FDFBF7] to-[#F5EFE4] dark:bg-[#0D1423] text-[#0A0F1A] dark:text-[#F5F2EA] border border-[#D6B878]/35 dark:border-[#D6B878]/30 shadow-luxury-light dark:shadow-none grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
         <div className="lg:col-span-6 space-y-5">
           <div className="flex flex-wrap items-center justify-between gap-2">
-            <div className="inline-flex items-center gap-2 text-xs font-mono uppercase tracking-wider text-[#D6B878]">
+            <div className="inline-flex items-center gap-2 text-xs font-mono uppercase tracking-wider text-[#9E7B35] dark:text-[#D6B878]">
               <Calculator className="w-4 h-4" /> Reserve Compounding Studio
             </div>
-            <div className="inline-flex rounded-xl bg-[#141D2D] p-1 border border-[#F5F2EA]/10 text-xs">
+            <div className="inline-flex rounded-xl bg-[#F4EFE6] dark:bg-[#141D2D] p-1 border border-[#0A0F1A]/10 dark:border-[#F5F2EA]/10 text-xs">
               {(['Essential', 'Elevate', 'Private'] as const).map((t) => (
                 <button
                   key={t}
@@ -309,7 +309,7 @@ export const PublicAccountsPage: React.FC = () => {
                   className={`px-3 py-1 rounded-lg font-medium transition-colors ${
                     selectedTierTab === t
                       ? 'bg-[#D6B878] text-[#080D18] font-semibold'
-                      : 'text-[#929DB0]'
+                      : 'text-[#6B778D] dark:text-[#929DB0]'
                   }`}
                 >
                   {t} ({(tierRates[t] * 100).toFixed(2)}%)
@@ -325,10 +325,10 @@ export const PublicAccountsPage: React.FC = () => {
           <div className="space-y-4 pt-1">
             <div>
               <div className="flex justify-between text-xs mb-1.5">
-                <label htmlFor="vault-principal" className="text-[#929DB0]">
+                <label htmlFor="vault-principal" className="text-[#6B778D] dark:text-[#929DB0]">
                   Simulated Vault Allocation
                 </label>
-                <span className="font-mono font-semibold text-[#D6B878] tabular-nums">
+                <span className="font-mono font-semibold text-[#9E7B35] dark:text-[#D6B878] tabular-nums">
                   ${depositSim.toLocaleString()} USD
                 </span>
               </div>
@@ -346,7 +346,7 @@ export const PublicAccountsPage: React.FC = () => {
 
             <div>
               <div className="flex justify-between text-xs mb-1.5">
-                <label htmlFor="vault-months" className="text-[#929DB0]">
+                <label htmlFor="vault-months" className="text-[#6B778D] dark:text-[#929DB0]">
                   Holding Horizon ({monthsSim} Months)
                 </label>
                 <span className="font-mono font-semibold tabular-nums">{monthsSim} Months</span>
@@ -365,15 +365,15 @@ export const PublicAccountsPage: React.FC = () => {
           </div>
 
           <div className="grid grid-cols-2 gap-4 pt-2">
-            <div className="p-4 rounded-2xl bg-[#141D2D] border border-[#F5F2EA]/10">
-              <span className="text-[10px] font-mono uppercase tracking-wider text-[#929DB0] block">
+            <div className="p-4 rounded-2xl bg-white dark:bg-[#141D2D] border border-[#0A0F1A]/10 dark:border-[#F5F2EA]/10 shadow-sm dark:shadow-none">
+              <span className="text-[10px] font-mono uppercase tracking-wider text-[#6B778D] dark:text-[#929DB0] block">
                 Projected Ending Balance
               </span>
-              <span className="font-mono text-2xl font-semibold text-[#F5F2EA] tabular-nums mt-1 block">
+              <span className="font-mono text-2xl font-semibold text-[#0A0F1A] dark:text-[#F5F2EA] tabular-nums mt-1 block">
                 ${(depositSim + projectedInterest).toLocaleString()}
               </span>
             </div>
-            <div className="p-4 rounded-2xl bg-[#141D2D] border border-[#36C995]/30">
+            <div className="p-4 rounded-2xl bg-white dark:bg-[#141D2D] border border-[#36C995]/40 shadow-sm dark:shadow-none">
               <span className="text-[10px] font-mono uppercase tracking-wider text-[#36C995] block">
                 Simulated Yield Generated
               </span>
@@ -385,9 +385,9 @@ export const PublicAccountsPage: React.FC = () => {
         </div>
 
         {/* Live Compounding Curve Chart */}
-        <div className="lg:col-span-6 rounded-2xl bg-[#141D2D] border border-[#F5F2EA]/10 p-5 space-y-4">
+        <div className="lg:col-span-6 rounded-2xl bg-white dark:bg-[#141D2D] border border-[#0A0F1A]/10 dark:border-[#F5F2EA]/10 p-5 space-y-4 shadow-sm dark:shadow-none">
           <div className="flex items-center justify-between text-xs">
-            <span className="font-mono uppercase tracking-wider text-[#D6B878]">
+            <span className="font-mono uppercase tracking-wider text-[#9E7B35] dark:text-[#D6B878]">
               Compounding Trajectory ({monthsSim}M)
             </span>
             <span className="font-mono text-[#36C995]">
@@ -403,10 +403,10 @@ export const PublicAccountsPage: React.FC = () => {
                     <stop offset="95%" stopColor="#36C995" stopOpacity={0.0} />
                   </linearGradient>
                 </defs>
-                <CartesianGrid strokeDasharray="3 3" stroke="rgba(146,157,176,0.12)" vertical={false} />
-                <XAxis dataKey="label" stroke="#929DB0" fontSize={11} tickLine={false} axisLine={false} />
+                <CartesianGrid strokeDasharray="3 3" stroke={theme === 'dark' ? 'rgba(146,157,176,0.12)' : 'rgba(10,15,26,0.06)'} vertical={false} />
+                <XAxis dataKey="label" stroke={theme === 'dark' ? '#929DB0' : '#6B778D'} fontSize={11} tickLine={false} axisLine={false} />
                 <YAxis
-                  stroke="#929DB0"
+                  stroke={theme === 'dark' ? '#929DB0' : '#6B778D'}
                   fontSize={11}
                   tickLine={false}
                   axisLine={false}
@@ -415,10 +415,11 @@ export const PublicAccountsPage: React.FC = () => {
                 />
                 <Tooltip
                   contentStyle={{
-                    backgroundColor: '#080D18',
-                    borderColor: 'rgba(214,184,120,0.4)',
+                    backgroundColor: theme === 'dark' ? '#080D18' : '#FFFFFF',
+                    borderColor: theme === 'dark' ? 'rgba(214,184,120,0.4)' : 'rgba(179,147,82,0.35)',
                     borderRadius: '12px',
-                    color: '#F5F2EA',
+                    color: theme === 'dark' ? '#F5F2EA' : '#0A0F1A',
+                    boxShadow: theme === 'dark' ? '0 10px 25px -5px rgba(0,0,0,0.5)' : '0 10px 25px -5px rgba(10,15,26,0.08)',
                     fontFamily: 'JetBrains Mono, monospace',
                     fontSize: '12px',
                   }}
