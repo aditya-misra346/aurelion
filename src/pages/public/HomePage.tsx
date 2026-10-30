@@ -369,7 +369,7 @@ export const HomePage: React.FC = () => {
               key={tier.name}
               className={`rounded-3xl p-6 flex flex-col justify-between border transition-all ${
                 tier.featured
-                  ? 'bg-gradient-to-br from-[#FFFFFF] via-[#FDFBF7] to-[#F5EFE4] text-[#0A0F1A] border-[#D6B878] shadow-luxury-light ring-1 ring-[#D6B878]/35 dark:ring-0 dark:bg-[#0D1423] dark:text-[#F5F2EA] dark:border-[#D6B878]/50 dark:shadow-luxury'
+                  ? 'bg-pearl-card dark:bg-none text-[#0A0F1A] border-[#D6B878] shadow-luxury-light ring-1 ring-[#D6B878]/35 dark:ring-0 dark:bg-[#0D1423] dark:text-[#F5F2EA] dark:border-[#D6B878]/50 dark:shadow-luxury'
                   : 'bg-white dark:bg-[#141D2D] border-[#0A0F1A]/10 dark:border-[#F5F2EA]/10 shadow-sm dark:shadow-none'
               }`}
             >

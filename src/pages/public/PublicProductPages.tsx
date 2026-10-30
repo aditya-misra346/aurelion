@@ -294,7 +294,7 @@ export const PublicAccountsPage: React.FC = () => {
       </div>
 
       {/* Interactive Reserve Compounding Calculator with Live AreaChart */}
-      <div className="rounded-3xl p-6 sm:p-10 bg-gradient-to-br from-[#FFFFFF] via-[#FDFBF7] to-[#F5EFE4] dark:bg-[#0D1423] text-[#0A0F1A] dark:text-[#F5F2EA] border border-[#D6B878]/35 dark:border-[#D6B878]/30 shadow-luxury-light dark:shadow-none grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+      <div className="rounded-3xl p-6 sm:p-10 bg-pearl-card dark:bg-none dark:bg-[#0D1423] text-[#0A0F1A] dark:text-[#F5F2EA] border border-[#D6B878]/35 dark:border-[#D6B878]/30 shadow-luxury-light dark:shadow-none grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
         <div className="lg:col-span-6 space-y-5">
           <div className="flex flex-wrap items-center justify-between gap-2">
             <div className="inline-flex items-center gap-2 text-xs font-mono uppercase tracking-wider text-[#9E7B35] dark:text-[#D6B878]">
@@ -1257,7 +1257,7 @@ export const PublicSecurityPage: React.FC = () => {
       </div>
 
       {/* Interactive Device & Session Governance Simulator */}
-      <div className="rounded-3xl p-8 bg-gradient-to-br from-[#FFFFFF] via-[#FDFBF7] to-[#F5EFE4] dark:bg-[#0D1423] text-[#0A0F1A] dark:text-[#F5F2EA] border border-[#D6B878]/35 dark:border-[#D6B878]/30 shadow-luxury-light dark:shadow-none space-y-6">
+      <div className="rounded-3xl p-8 bg-pearl-card dark:bg-none dark:bg-[#0D1423] text-[#0A0F1A] dark:text-[#F5F2EA] border border-[#D6B878]/35 dark:border-[#D6B878]/30 shadow-luxury-light dark:shadow-none space-y-6">
         <div className="flex flex-wrap items-center justify-between gap-4 border-b border-[#0A0F1A]/10 dark:border-[#F5F2EA]/10 pb-4">
           <div>
             <span className="text-xs font-mono uppercase tracking-wider text-[#9E7B35] dark:text-[#D6B878]">
