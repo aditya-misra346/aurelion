@@ -129,6 +129,8 @@ export const PhysicalCardPreview: React.FC<PhysicalCardPreviewProps> = ({
     ? FULL_SAMPLE_NUMBERS[variant] || maskedNumber
     : maskedNumber;
 
+  const isTilting = tilt.rotateX !== 0 || tilt.rotateY !== 0;
+
   return (
     <div
       className={`perspective-1000 select-none ${scaleClasses[scale]} mx-auto cursor-pointer`}
@@ -141,10 +143,14 @@ export const PhysicalCardPreview: React.FC<PhysicalCardPreviewProps> = ({
       }}
     >
       <div
-        className="relative w-full h-full rounded-2xl transition-transform duration-500 preserve-3d shadow-luxury"
+        className="relative w-full h-full rounded-2xl preserve-3d shadow-luxury"
         style={{
           transformStyle: 'preserve-3d',
           WebkitTransformStyle: 'preserve-3d',
+          transition: isTilting
+            ? 'transform 0.12s cubic-bezier(0.16, 1, 0.3, 1)'
+            : 'transform 0.6s cubic-bezier(0.16, 1, 0.3, 1)',
+          willChange: 'transform',
           transform: `rotateX(${tilt.rotateX}deg) rotateY(${
             (isFlipped ? 180 : 0) + tilt.rotateY
           }deg)`,
