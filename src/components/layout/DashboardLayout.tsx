@@ -481,10 +481,10 @@ export const DashboardLayout: React.FC = () => {
         {mobileMenuOpen && (
           <div className="fixed inset-0 z-50 lg:hidden flex">
             <div
-              className="fixed inset-0 bg-black/60 backdrop-blur-sm"
+              className="fixed inset-0 bg-black/60 backdrop-blur-sm animate-in fade-in duration-200"
               onClick={() => setMobileMenuOpen(false)}
             />
-            <div className="relative w-72 max-w-[85vw] bg-white dark:bg-[#0D1423] h-full p-5 flex flex-col justify-between z-10">
+            <div className="relative w-72 max-w-[85vw] bg-white dark:bg-[#0D1423] h-full p-5 flex flex-col justify-between z-10 animate-in slide-in-from-left duration-300 ease-out">
               <div className="space-y-6">
                 <div className="flex items-center justify-between">
                   <BrandMark to="/" size="sm" />
