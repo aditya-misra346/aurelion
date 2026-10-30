@@ -200,3 +200,29 @@ html.theme-transitioning *::after {
     animation: none !important;
   }
 }
+
+/* Isolated restoration of Top Navigation Bar font sizes to original pre-update specifications */
+.public-navbar .text-sm,
+.public-navbar button.text-sm,
+.public-navbar a.text-sm {
+  font-size: 0.875rem !important; /* 14px original Tailwind text-sm */
+  line-height: 1.25rem !important; /* 20px original Tailwind text-sm */
+}
+
+.public-navbar .text-xs,
+.public-navbar button.text-xs,
+.public-navbar a.text-xs {
+  font-size: 0.75rem !important; /* 12px original Tailwind text-xs */
+  line-height: 1rem !important; /* 16px original Tailwind text-xs */
+  letter-spacing: normal !important;
+}
+
+.public-navbar .font-mono.text-xs {
+  letter-spacing: 0.05em !important;
+}
+
+.public-navbar .text-xl {
+  font-size: 1.25rem !important; /* 20px original Tailwind text-xl (AURELION brand text) */
+  line-height: 1.75rem !important; /* 28px original Tailwind text-xl */
+}
+
