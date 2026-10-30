@@ -417,11 +417,26 @@ export const PhysicalCardPreview: React.FC<PhysicalCardPreviewProps> = ({
               <div
                 className={`${
                   isSm
-                    ? 'px-1.5 sm:px-2 h-5 sm:h-6.5 text-[8.5px] sm:text-[10px]'
-                    : 'px-1.5 min-[380px]:px-2 sm:px-3 h-5 min-[380px]:h-6 sm:h-8 text-[9px] min-[380px]:text-[10px] sm:text-xs'
-                } rounded bg-[#080D18]/80 border border-[#D6B878]/40 flex items-center justify-center shrink-0`}
+                    ? 'px-1.5 sm:px-2.5 h-5 sm:h-6.5'
+                    : 'px-1.5 min-[380px]:px-2.5 sm:px-3 h-5 min-[380px]:h-6 sm:h-8'
+                } rounded bg-[#080D18]/85 border border-[#D6B878]/40 flex flex-col items-center justify-center shrink-0 leading-none`}
               >
-                <span className="font-mono text-[#D6B878] tracking-widest">
+                <span
+                  className={`block uppercase font-mono font-medium tracking-[0.14em] text-[#D6B878]/70 ${
+                    isSm
+                      ? 'text-[5.5px] sm:text-[6.5px] mb-0.5'
+                      : 'text-[5.5px] min-[380px]:text-[6px] sm:text-[7px] mb-0.5'
+                  }`}
+                >
+                  CVV
+                </span>
+                <span
+                  className={`font-mono text-[#D6B878] tracking-widest leading-none ${
+                    isSm
+                      ? 'text-[8.5px] sm:text-[10px]'
+                      : 'text-[9px] min-[380px]:text-[10px] sm:text-xs'
+                  }`}
+                >
                   {revealNumbers ? '842' : '•••'}
                 </span>
               </div>
