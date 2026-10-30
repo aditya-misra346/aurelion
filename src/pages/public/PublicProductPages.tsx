@@ -250,6 +250,7 @@ export const PersonalBankingPage: React.FC = () => {
    3. /accounts — SIGNATURE ACCOUNTS & YIELD SIMULATOR PAGE
    ============================================================================ */
 export const PublicAccountsPage: React.FC = () => {
+  const { theme } = useBanking();
   const [depositSim, setDepositSim] = useState(250000);
   const [monthsSim, setMonthsSim] = useState(12);
   const [selectedTierTab, setSelectedTierTab] = useState<'Essential' | 'Elevate' | 'Private'>('Private');
