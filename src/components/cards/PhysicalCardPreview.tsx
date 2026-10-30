@@ -101,9 +101,10 @@ export const PhysicalCardPreview: React.FC<PhysicalCardPreviewProps> = ({
 }) => {
   const style = VARIANT_STYLES[variant] || VARIANT_STYLES.obsidian;
   const [tilt, setTilt] = useState({ rotateX: 0, rotateY: 0 });
+  const isSm = scale === 'sm';
 
   const scaleClasses = {
-    sm: 'w-[290px] h-[182px]',
+    sm: 'w-[290px] max-w-full aspect-[1.586/1]',
     md: 'w-full max-w-[380px] aspect-[1.586/1]',
     lg: 'w-full max-w-[430px] aspect-[1.586/1]',
   };
