@@ -75,6 +75,10 @@ export const DashboardLayout: React.FC = () => {
   const location = useLocation();
 
   React.useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [location.pathname]);
+
+  React.useEffect(() => {
     const onKeyDown = (e: KeyboardEvent) => {
       if ((e.metaKey || e.ctrlKey) && e.key.toLowerCase() === 'k') {
         e.preventDefault();
