@@ -357,12 +357,12 @@ export const CommandPalette: React.FC<CommandPaletteProps> = ({ isOpen, onClose 
     >
       {/* Backdrop */}
       <div
-        className="fixed inset-0 bg-[#080D18]/75 backdrop-blur-md transition-opacity"
+        className="fixed inset-0 bg-[#080D18]/75 backdrop-blur-md transition-opacity animate-in fade-in duration-200"
         onClick={onClose}
       />
 
       {/* Modal Box */}
-      <div className="relative z-10 w-full max-w-2xl rounded-3xl bg-white dark:bg-[#141D2D] border border-[#D6B878]/30 dark:border-[#D6B878]/35 shadow-luxury-light dark:shadow-luxury overflow-hidden">
+      <div className="relative z-10 w-full max-w-2xl rounded-3xl bg-white dark:bg-[#141D2D] border border-[#D6B878]/30 dark:border-[#D6B878]/35 shadow-luxury-light dark:shadow-luxury overflow-hidden animate-in fade-in zoom-in-95 duration-200 ease-out">
         {/* Search Input Header */}
         <div className="flex items-center gap-3 px-5 py-4 border-b border-[#080D18]/10 dark:border-[#F5F2EA]/10">
           <Search className="w-5 h-5 text-[#B39352] dark:text-[#D6B878] shrink-0" />
