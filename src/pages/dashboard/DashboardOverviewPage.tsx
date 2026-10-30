@@ -45,6 +45,7 @@ const DONUT_COLORS = ['#D6B878', '#36C995', '#6366F1', '#F4B860', '#929DB0', '#F
 
 export const DashboardOverviewPage: React.FC = () => {
   const {
+    theme,
     accounts,
     transactions,
     budgets,
