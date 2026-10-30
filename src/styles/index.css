@@ -14,6 +14,8 @@
     --border-subtle: rgba(10, 15, 26, 0.08);
     --border-gold: rgba(179, 147, 82, 0.30);
     --accent-gold: #9E7B35;
+    --ease-luxury: cubic-bezier(0.16, 1, 0.3, 1);
+    --ease-standard: cubic-bezier(0.4, 0, 0.2, 1);
   }
 
   .dark {
@@ -27,6 +29,12 @@
     --border-subtle: rgba(245, 242, 234, 0.08);
     --border-gold: rgba(214, 184, 120, 0.28);
     --accent-gold: #D6B878;
+    --ease-luxury: cubic-bezier(0.16, 1, 0.3, 1);
+    --ease-standard: cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  * {
+    -webkit-tap-highlight-color: transparent;
   }
 
   html {
@@ -34,13 +42,32 @@
     scroll-behavior: smooth;
     background-color: var(--bg-primary);
     color: var(--text-primary);
+    -webkit-text-size-adjust: 100%;
   }
 
   body {
     background-color: var(--bg-primary);
     color: var(--text-primary);
-    transition: background-color 0.25s ease, color 0.25s ease;
     overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  /* Optimize touch responsiveness and eliminate mobile tap latency */
+  button,
+  a,
+  input,
+  select,
+  textarea,
+  [role="button"] {
+    touch-action: manipulation;
+  }
+
+  /* Subtle tactile click compression for interactive buttons */
+  button:not(:disabled):active,
+  a[role="button"]:active {
+    transform: scale(0.985);
+    transition: transform 0.08s var(--ease-luxury);
   }
 }
 
