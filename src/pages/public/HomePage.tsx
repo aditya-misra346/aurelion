@@ -509,7 +509,7 @@ export const HomePage: React.FC = () => {
           </div>
 
           {/* Right 5 Cols: Interactive Security Posture Card */}
-          <div className="lg:col-span-5 rounded-3xl bg-gradient-to-br from-[#FFFFFF] via-[#FDFBF7] to-[#F5EFE4] dark:bg-[#0D1423] text-[#0A0F1A] dark:text-[#F5F2EA] border border-[#D6B878]/35 dark:border-[#D6B878]/30 shadow-luxury-light dark:shadow-none p-6 flex flex-col justify-between space-y-5">
+          <div className="lg:col-span-5 rounded-3xl bg-pearl-card dark:bg-none dark:bg-[#0D1423] text-[#0A0F1A] dark:text-[#F5F2EA] border border-[#D6B878]/35 dark:border-[#D6B878]/30 shadow-luxury-light dark:shadow-none p-6 flex flex-col justify-between space-y-5">
             <div className="flex items-center justify-between gap-4">
               <div>
                 <span className="text-[10px] font-mono uppercase tracking-widest text-[#36C995] block">
