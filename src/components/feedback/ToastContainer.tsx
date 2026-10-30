@@ -25,7 +25,7 @@ export const ToastContainer: React.FC = () => {
         return (
           <div
             key={toast.id}
-            className="pointer-events-auto flex items-start gap-3.5 p-4 rounded-xl bg-white dark:bg-[#141D2D] border border-[#080D18]/10 dark:border-[#D6B878]/30 shadow-luxury text-[#080D18] dark:text-[#F5F2EA] transition-all duration-300 animate-in fade-in slide-in-from-bottom-3"
+            className="pointer-events-auto flex items-start gap-3.5 p-4 rounded-xl bg-white dark:bg-[#141D2D] border border-[#D6B878]/35 dark:border-[#D6B878]/30 shadow-luxury-light dark:shadow-luxury text-[#0A0F1A] dark:text-[#F5F2EA] transition-all duration-300 animate-in fade-in slide-in-from-bottom-3"
           >
             <div className="mt-0.5">{iconMap[variant]}</div>
             <div className="flex-1 min-w-0">

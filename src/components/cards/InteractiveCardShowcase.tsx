@@ -171,11 +171,11 @@ export const InteractiveCardShowcase: React.FC = () => {
       </div>
 
       {/* Right Column: Visual Telemetry & Specs (5 cols) */}
-      <div className="lg:col-span-5 rounded-3xl p-6 sm:p-8 bg-white dark:bg-[#141D2D] border border-[#080D18]/10 dark:border-[#F5F2EA]/10 flex flex-col justify-between space-y-6 shadow-luxury-light dark:shadow-luxury">
+      <div className="lg:col-span-5 rounded-3xl p-6 sm:p-8 bg-white dark:bg-[#141D2D] border border-[#D6B878]/25 dark:border-[#F5F2EA]/10 flex flex-col justify-between space-y-6 shadow-luxury-light dark:shadow-luxury">
         <div className="space-y-5">
           <div className="flex items-center justify-between">
             <div>
-              <span className="text-[10px] font-mono uppercase tracking-[0.2em] text-[#B39352] dark:text-[#D6B878] block">
+              <span className="text-[10px] font-mono uppercase tracking-[0.2em] text-[#9E7B35] dark:text-[#D6B878] block">
                 {activeCard.tierLabel}
               </span>
               <h3 className="font-serif text-3xl font-semibold mt-0.5">
@@ -193,9 +193,9 @@ export const InteractiveCardShowcase: React.FC = () => {
           </div>
 
           {/* Visual Spend Velocity Sparkline Card */}
-          <div className="p-4 rounded-2xl bg-[#F5F2EA] dark:bg-[#0D1423] border border-current/5 space-y-2">
+          <div className="p-4 rounded-2xl bg-[#F8F5EE] dark:bg-[#0D1423] border border-[#D6B878]/20 dark:border-current/5 space-y-2">
             <div className="flex items-center justify-between text-xs">
-              <span className="text-[#6E7A8E] dark:text-[#929DB0]">6-Week Authorization Curve</span>
+              <span className="text-[#6B778D] dark:text-[#929DB0]">6-Week Authorization Curve</span>
               <span className="font-mono font-semibold text-[#36C995]">
                 ${activeCard.currentMonthSpend.toLocaleString()} / ${activeCard.monthlyLimit.toLocaleString()}
               </span>
@@ -212,7 +212,7 @@ export const InteractiveCardShowcase: React.FC = () => {
             {activeCard.features.map((feat, i) => (
               <div
                 key={i}
-                className="p-3 rounded-xl bg-[#F5F2EA]/70 dark:bg-[#0D1423]/70 border border-current/5 flex items-start gap-2 text-xs"
+                className="p-3 rounded-xl bg-[#F8F5EE]/70 dark:bg-[#0D1423]/70 border border-[#D6B878]/15 dark:border-current/5 flex items-start gap-2 text-xs"
               >
                 <Check className="w-3.5 h-3.5 text-[#36C995] shrink-0 mt-0.5" />
                 <span className="leading-snug">{feat}</span>
