@@ -114,11 +114,11 @@ export const DashboardLayout: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen flex bg-[#F5F2EA] dark:bg-[#080D18] text-[#080D18] dark:text-[#F5F2EA]">
+    <div className="min-h-screen flex bg-[#FAF8F5] dark:bg-[#080D18] text-[#0A0F1A] dark:text-[#F5F2EA]">
       {/* DESKTOP SIDEBAR */}
       <aside
         aria-label="Client Portal Sidebar"
-        className={`hidden lg:flex flex-col justify-between shrink-0 bg-white dark:bg-[#0D1423] border-r border-[#080D18]/10 dark:border-[#F5F2EA]/10 transition-all duration-300 ${
+        className={`hidden lg:flex flex-col justify-between shrink-0 bg-white dark:bg-[#0D1423] border-r border-[#D6B878]/25 dark:border-[#F5F2EA]/10 transition-all duration-300 ${
           sidebarCollapsed ? 'w-20' : 'w-64'
         }`}
       >
