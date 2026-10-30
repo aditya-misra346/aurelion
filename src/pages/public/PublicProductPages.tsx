@@ -1257,10 +1257,10 @@ export const PublicSecurityPage: React.FC = () => {
       </div>
 
       {/* Interactive Device & Session Governance Simulator */}
-      <div className="rounded-3xl p-8 bg-[#0D1423] text-[#F5F2EA] border border-[#D6B878]/30 space-y-6">
-        <div className="flex flex-wrap items-center justify-between gap-4 border-b border-[#F5F2EA]/10 pb-4">
+      <div className="rounded-3xl p-8 bg-gradient-to-br from-[#FFFFFF] via-[#FDFBF7] to-[#F5EFE4] dark:bg-[#0D1423] text-[#0A0F1A] dark:text-[#F5F2EA] border border-[#D6B878]/35 dark:border-[#D6B878]/30 shadow-luxury-light dark:shadow-none space-y-6">
+        <div className="flex flex-wrap items-center justify-between gap-4 border-b border-[#0A0F1A]/10 dark:border-[#F5F2EA]/10 pb-4">
           <div>
-            <span className="text-xs font-mono uppercase tracking-wider text-[#D6B878]">
+            <span className="text-xs font-mono uppercase tracking-wider text-[#9E7B35] dark:text-[#D6B878]">
               Interactive Session Governance (Demo)
             </span>
             <h2 className="font-serif text-2xl sm:text-3xl font-semibold mt-1">
@@ -1272,11 +1272,11 @@ export const PublicSecurityPage: React.FC = () => {
           </span>
         </div>
 
-        <div className="divide-y divide-[#F5F2EA]/10">
+        <div className="divide-y divide-[#0A0F1A]/10 dark:divide-[#F5F2EA]/10">
           {sessions.map((ses) => (
             <div key={ses.id} className="py-4 flex flex-wrap items-center justify-between gap-4">
               <div className="flex items-center gap-3.5">
-                <div className="w-10 h-10 rounded-xl bg-[#141D2D] border border-[#F5F2EA]/10 flex items-center justify-center text-[#D6B878]">
+                <div className="w-10 h-10 rounded-xl bg-[#F4EFE6] dark:bg-[#141D2D] border border-[#0A0F1A]/10 dark:border-[#F5F2EA]/10 flex items-center justify-center text-[#9E7B35] dark:text-[#D6B878]">
                   {ses.device.includes('MacBook') ? (
                     <Laptop className="w-5 h-5" />
                   ) : (
@@ -1285,7 +1285,7 @@ export const PublicSecurityPage: React.FC = () => {
                 </div>
                 <div>
                   <p className="text-sm font-semibold">{ses.device}</p>
-                  <p className="text-xs text-[#929DB0]">
+                  <p className="text-xs text-[#6B778D] dark:text-[#929DB0]">
                     {ses.location} • <span className="font-mono text-[#36C995]">{ses.status}</span>
                   </p>
                 </div>
