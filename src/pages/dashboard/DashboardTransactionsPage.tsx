@@ -441,7 +441,7 @@ export const DashboardTransactionsPage: React.FC = () => {
             <div className="overflow-x-auto">
               <table className="w-full text-left border-collapse">
                 <thead>
-                  <tr className="border-b border-[#080D18]/10 dark:border-[#F5F2EA]/10 bg-[#F5F2EA]/60 dark:bg-[#0D1423] text-[11px] font-mono uppercase tracking-wider text-[#6E7A8E] dark:text-[#929DB0]">
+                  <tr className="border-b border-[#D6B878]/25 dark:border-[#F5F2EA]/10 bg-[#F8F5EE] dark:bg-[#0D1423] text-[11px] font-mono uppercase tracking-wider text-[#6B778D] dark:text-[#929DB0]">
                     <th className="py-3.5 px-5">Merchant & Description</th>
                     <th className="py-3.5 px-4">
                       <button
