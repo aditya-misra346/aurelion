@@ -46,27 +46,27 @@ export const DashboardProfilePage: React.FC = () => {
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-8">
         {/* Left 5 Cols: Client Crest & Advisor Card */}
         <div className="lg:col-span-5 space-y-6">
-          <div className="rounded-3xl p-6 bg-[#0D1423] text-[#F5F2EA] border border-[#D6B878]/35 space-y-5">
+          <div className="rounded-3xl p-6 bg-gradient-to-br from-[#FFFFFF] via-[#FDFBF7] to-[#F5EFE4] dark:bg-[#0D1423] text-[#0A0F1A] dark:text-[#F5F2EA] border border-[#D6B878]/35 shadow-luxury-light dark:shadow-none space-y-5">
             <div className="flex items-center gap-4">
-              <div className="w-14 h-14 rounded-2xl bg-[#D6B878] text-[#080D18] font-serif font-bold text-2xl flex items-center justify-center">
+              <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-[#E5CFA0] to-[#B39352] text-[#080D18] font-serif font-bold text-2xl flex items-center justify-center shadow-sm">
                 JS
               </div>
               <div>
-                <span className="text-[10px] font-mono uppercase tracking-widest text-[#D6B878]">
+                <span className="text-[10px] font-mono uppercase tracking-widest text-[#9E7B35] dark:text-[#D6B878]">
                   {profile.membershipTier} Client Tier
                 </span>
                 <h2 className="font-serif text-2xl font-semibold">{profile.fullName}</h2>
-                <p className="text-xs text-[#929DB0]">ID: {profile.clientId}</p>
+                <p className="text-xs text-[#6B778D] dark:text-[#929DB0]">ID: {profile.clientId}</p>
               </div>
             </div>
 
-            <div className="pt-4 border-t border-[#F5F2EA]/10 text-xs space-y-2">
+            <div className="pt-4 border-t border-[#0A0F1A]/10 dark:border-[#F5F2EA]/10 text-xs space-y-2">
               <div className="flex justify-between">
-                <span className="text-[#929DB0]">Member Since</span>
+                <span className="text-[#6B778D] dark:text-[#929DB0]">Member Since</span>
                 <span className="font-mono">{profile.memberSince}</span>
               </div>
               <div className="flex justify-between">
-                <span className="text-[#929DB0]">Primary Jurisdiction</span>
+                <span className="text-[#6B778D] dark:text-[#929DB0]">Primary Jurisdiction</span>
                 <span>{profile.residency}</span>
               </div>
             </div>

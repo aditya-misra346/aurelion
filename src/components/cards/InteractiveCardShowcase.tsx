@@ -39,7 +39,7 @@ export const InteractiveCardShowcase: React.FC = () => {
         className={`lg:col-span-7 rounded-3xl p-6 sm:p-8 border transition-colors duration-500 flex flex-col justify-between relative overflow-hidden ${
           studioLight === 'dark'
             ? 'bg-[#0D1423] border-[#D6B878]/25 text-[#F5F2EA]'
-            : 'bg-[#F5F2EA] border-[#080D18]/15 text-[#080D18]'
+            : 'bg-gradient-to-br from-[#FFFFFF] via-[#FAF6EE] to-[#F3ECE0] border-[#D6B878]/30 text-[#0A0F1A] shadow-luxury-light'
         }`}
       >
         <div
