@@ -101,7 +101,7 @@ export const PersonalBankingPage: React.FC = () => {
         <div className="lg:col-span-6 rounded-3xl p-6 sm:p-8 bg-white dark:bg-[#141D2D] border border-[#080D18]/10 dark:border-[#D6B878]/30 shadow-luxury space-y-5">
           <div className="flex items-center justify-between border-b border-current/10 pb-4">
             <div>
-              <span className="text-[10px] font-mono uppercase tracking-widest text-[#B39352] dark:text-[#D6B878] block">
+              <span className="text-[11px] font-mono uppercase tracking-widest text-[#B39352] dark:text-[#D6B878] block">
                 Interactive Routing Studio
               </span>
               <h2 className="text-lg font-semibold">Automated Inflow Sweep Rules</h2>
@@ -366,7 +366,7 @@ export const PublicAccountsPage: React.FC = () => {
 
           <div className="grid grid-cols-2 gap-4 pt-2">
             <div className="p-4 rounded-2xl bg-white dark:bg-[#141D2D] border border-[#0A0F1A]/10 dark:border-[#F5F2EA]/10 shadow-sm dark:shadow-none">
-              <span className="text-[10px] font-mono uppercase tracking-wider text-[#6B778D] dark:text-[#929DB0] block">
+              <span className="text-[11px] font-mono uppercase tracking-wider text-[#6B778D] dark:text-[#929DB0] block">
                 Projected Ending Balance
               </span>
               <span className="font-mono text-2xl font-semibold text-[#0A0F1A] dark:text-[#F5F2EA] tabular-nums mt-1 block">
@@ -374,7 +374,7 @@ export const PublicAccountsPage: React.FC = () => {
               </span>
             </div>
             <div className="p-4 rounded-2xl bg-white dark:bg-[#141D2D] border border-[#36C995]/40 shadow-sm dark:shadow-none">
-              <span className="text-[10px] font-mono uppercase tracking-wider text-[#36C995] block">
+              <span className="text-[11px] font-mono uppercase tracking-wider text-[#36C995] block">
                 Simulated Yield Generated
               </span>
               <span className="font-mono text-2xl font-semibold text-[#36C995] tabular-nums mt-1 block">
@@ -571,7 +571,7 @@ export const PublicCardsPage: React.FC = () => {
             className="rounded-2xl p-6 bg-white dark:bg-[#141D2D] border border-[#080D18]/10 dark:border-[#F5F2EA]/10 space-y-3"
           >
             <div className="flex items-center justify-between">
-              <span className="text-[10px] font-mono uppercase tracking-widest text-[#B39352] dark:text-[#D6B878]">
+              <span className="text-[11px] font-mono uppercase tracking-widest text-[#B39352] dark:text-[#D6B878]">
                 0{idx + 1} • Alloy
               </span>
               <Sparkline data={spec.spark} color={spec.color} width={72} height={24} />
@@ -643,7 +643,7 @@ export const PublicPaymentsPage: React.FC = () => {
         <div className="lg:col-span-7 rounded-3xl p-6 sm:p-8 bg-white dark:bg-[#141D2D] border border-[#080D18]/10 dark:border-[#D6B878]/30 shadow-luxury space-y-5">
           <div className="flex items-center justify-between border-b border-current/10 pb-4">
             <div>
-              <span className="text-[10px] font-mono uppercase tracking-widest text-[#B39352] dark:text-[#D6B878] block">
+              <span className="text-[11px] font-mono uppercase tracking-widest text-[#B39352] dark:text-[#D6B878] block">
                 Illustrative Corridor Preview
               </span>
               <h2 className="text-lg font-semibold">Multi-Currency Settlement & 7-Day Spot Curve</h2>
@@ -689,7 +689,7 @@ export const PublicPaymentsPage: React.FC = () => {
               </div>
 
               <div className="p-4 rounded-2xl bg-[#F5F2EA] dark:bg-[#0D1423] border border-current/10 space-y-1.5">
-                <div className="flex justify-between text-[11px] text-[#6E7A8E] dark:text-[#929DB0]">
+                <div className="flex justify-between text-xs text-[#6E7A8E] dark:text-[#929DB0]">
                   <span>Reference Rate</span>
                   <span className="font-mono">
                     1 USD = {rateObj.rate} {targetCorridor}
@@ -707,7 +707,7 @@ export const PublicPaymentsPage: React.FC = () => {
 
             {/* 7-Day Corridor AreaChart */}
             <div className="sm:col-span-6 p-4 rounded-2xl bg-[#F5F2EA]/60 dark:bg-[#0D1423] border border-current/10 space-y-2">
-              <div className="flex items-center justify-between text-[11px] font-mono">
+              <div className="flex items-center justify-between text-xs font-mono">
                 <span className="text-[#6E7A8E] dark:text-[#929DB0]">
                   USD/{targetCorridor} 7D Illustrative Curve
                 </span>
@@ -782,7 +782,7 @@ export const PublicPaymentsPage: React.FC = () => {
             key={i}
             className="rounded-2xl p-6 bg-white dark:bg-[#141D2D] border border-[#080D18]/10 dark:border-[#F5F2EA]/10 space-y-2"
           >
-            <span className="text-[10px] font-mono uppercase tracking-wider text-[#36C995]">
+            <span className="text-[11px] font-mono uppercase tracking-wider text-[#36C995]">
               {item.window}
             </span>
             <h3 className="font-serif text-xl font-semibold">{item.rail}</h3>
@@ -923,7 +923,7 @@ export const PublicLoansPage: React.FC = () => {
             </div>
 
             <div className="sm:col-span-6 p-4 rounded-2xl bg-[#F5F2EA]/60 dark:bg-[#0D1423] border border-current/10 space-y-2">
-              <div className="flex items-center justify-between text-[11px] font-mono">
+              <div className="flex items-center justify-between text-xs font-mono">
                 <span className="text-[#6E7A8E] dark:text-[#929DB0]">Principal Paydown Curve</span>
                 <span className="text-[#36C995]">{termYears}Y Schedule</span>
               </div>
@@ -1046,7 +1046,7 @@ export const PublicWealthPage: React.FC = () => {
         <div className="lg:col-span-6 rounded-3xl p-6 sm:p-8 bg-white dark:bg-[#141D2D] border border-[#080D18]/10 dark:border-[#D6B878]/30 shadow-luxury space-y-5">
           <div className="flex flex-wrap items-center justify-between gap-2 border-b border-current/10 pb-4">
             <div>
-              <span className="text-[10px] font-mono uppercase tracking-widest text-[#B39352] dark:text-[#D6B878] block">
+              <span className="text-[11px] font-mono uppercase tracking-widest text-[#B39352] dark:text-[#D6B878] block">
                 Mandate Explorer
               </span>
               <h2 className="text-lg font-semibold">Allocation Archetypes</h2>
@@ -1243,7 +1243,7 @@ export const PublicSecurityPage: React.FC = () => {
                 <div className="w-10 h-10 rounded-xl bg-[#D6B878]/15 text-[#B39352] dark:text-[#D6B878] flex items-center justify-center">
                   <Icon className="w-5 h-5" />
                 </div>
-                <span className="text-[10px] font-mono uppercase tracking-wider px-2.5 py-1 rounded bg-[#36C995]/15 text-[#36C995]">
+                <span className="text-[11px] font-mono uppercase tracking-wider px-2.5 py-1 rounded bg-[#36C995]/15 text-[#36C995]">
                   {item.status}
                 </span>
               </div>
@@ -1393,7 +1393,7 @@ export const PublicAboutPage: React.FC = () => {
                 <Building2 className="w-4 h-4 text-[#D6B878]" />
               </div>
               <p className="text-xs text-[#6E7A8E] dark:text-[#929DB0]">{salon.address}</p>
-              <p className="text-[11px] font-mono text-[#B39352] dark:text-[#D6B878] pt-2">
+              <p className="text-xs font-mono text-[#B39352] dark:text-[#D6B878] pt-2">
                 {salon.focus}
               </p>
             </div>

@@ -556,7 +556,7 @@ export const DashboardAnalyticsPage: React.FC = () => {
           {/* Clickable Month Inspector Bar */}
           <div className="pt-2 border-t border-current/10 flex flex-wrap items-center justify-between gap-3">
             <div className="flex items-center gap-1.5">
-              <span className="text-[11px] font-mono uppercase tracking-wider text-[#6E7A8E] dark:text-[#929DB0] mr-1">
+              <span className="text-xs font-mono uppercase tracking-wider text-[#6E7A8E] dark:text-[#929DB0] mr-1">
                 Inspect Month:
               </span>
               {syncedHistory.map((m) => (

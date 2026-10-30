@@ -220,7 +220,7 @@ export const DashboardTransactionsPage: React.FC = () => {
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-4">
         <div className="lg:col-span-7 grid grid-cols-1 sm:grid-cols-3 gap-3">
           <div className="rounded-2xl p-4 bg-white dark:bg-[#141D2D] border border-[#080D18]/10 dark:border-[#F5F2EA]/10">
-            <span className="text-[10px] font-mono uppercase tracking-wider text-[#6E7A8E] dark:text-[#929DB0] block">
+            <span className="text-[11px] font-mono uppercase tracking-wider text-[#6E7A8E] dark:text-[#929DB0] block">
               Filtered Inflows ({filteredMetrics.inflowCount})
             </span>
             <span className="font-mono text-lg sm:text-xl font-semibold text-[#36C995] tabular-nums mt-1 block">
@@ -233,7 +233,7 @@ export const DashboardTransactionsPage: React.FC = () => {
           </div>
 
           <div className="rounded-2xl p-4 bg-white dark:bg-[#141D2D] border border-[#080D18]/10 dark:border-[#F5F2EA]/10">
-            <span className="text-[10px] font-mono uppercase tracking-wider text-[#6E7A8E] dark:text-[#929DB0] block">
+            <span className="text-[11px] font-mono uppercase tracking-wider text-[#6E7A8E] dark:text-[#929DB0] block">
               Filtered Outflows ({filteredMetrics.outflowCount})
             </span>
             <span className="font-mono text-lg sm:text-xl font-semibold text-[#D6B878] tabular-nums mt-1 block">
@@ -246,7 +246,7 @@ export const DashboardTransactionsPage: React.FC = () => {
           </div>
 
           <div className="rounded-2xl p-4 bg-white dark:bg-[#141D2D] border border-[#080D18]/10 dark:border-[#F5F2EA]/10">
-            <span className="text-[10px] font-mono uppercase tracking-wider text-[#6E7A8E] dark:text-[#929DB0] block">
+            <span className="text-[11px] font-mono uppercase tracking-wider text-[#6E7A8E] dark:text-[#929DB0] block">
               Net Displayed Delta
             </span>
             <span
@@ -266,14 +266,14 @@ export const DashboardTransactionsPage: React.FC = () => {
         {/* Interactive Category Proportion Bar (Click to Filter) */}
         <div className="lg:col-span-5 rounded-2xl p-4 bg-white dark:bg-[#141D2D] border border-[#080D18]/10 dark:border-[#F5F2EA]/10 flex flex-col justify-between space-y-2.5">
           <div className="flex items-center justify-between text-xs">
-            <span className="text-[10px] font-mono uppercase tracking-wider text-[#6E7A8E] dark:text-[#929DB0]">
+            <span className="text-[11px] font-mono uppercase tracking-wider text-[#6E7A8E] dark:text-[#929DB0]">
               Displayed Outflow Composition (Click Pill to Filter)
             </span>
             {categoryFilter !== 'all' && (
               <button
                 type="button"
                 onClick={() => setCategoryFilter('all')}
-                className="text-[10px] font-mono text-[#D6B878] hover:underline"
+                className="text-[11px] font-mono text-[#D6B878] hover:underline"
               >
                 Show All
               </button>
@@ -303,7 +303,7 @@ export const DashboardTransactionsPage: React.FC = () => {
                         setCategoryFilter(active ? 'all' : c.category);
                         setPage(1);
                       }}
-                      className={`inline-flex items-center gap-1.5 px-2 py-0.5 rounded-md text-[10px] font-mono border transition-colors ${
+                      className={`inline-flex items-center gap-1.5 px-2 py-0.5 rounded-md text-[11px] font-mono border transition-colors ${
                         active
                           ? 'bg-[#D6B878]/20 border-[#D6B878] text-[#D6B878] font-semibold'
                           : 'border-current/10 text-[#6E7A8E] dark:text-[#929DB0] hover:border-current/30'
@@ -441,7 +441,7 @@ export const DashboardTransactionsPage: React.FC = () => {
             <div className="overflow-x-auto">
               <table className="w-full text-left border-collapse">
                 <thead>
-                  <tr className="border-b border-[#D6B878]/25 dark:border-[#F5F2EA]/10 bg-[#F8F5EE] dark:bg-[#0D1423] text-[11px] font-mono uppercase tracking-wider text-[#6B778D] dark:text-[#929DB0]">
+                  <tr className="border-b border-[#D6B878]/25 dark:border-[#F5F2EA]/10 bg-[#F8F5EE] dark:bg-[#0D1423] text-xs font-mono uppercase tracking-wider text-[#6B778D] dark:text-[#929DB0]">
                     <th className="py-3.5 px-5">Merchant & Description</th>
                     <th className="py-3.5 px-4">
                       <button
@@ -517,7 +517,7 @@ export const DashboardTransactionsPage: React.FC = () => {
                       </td>
                       <td className="py-4 px-4">
                         <span
-                          className={`inline-block font-mono text-[10px] uppercase tracking-wider px-2 py-0.5 rounded ${
+                          className={`inline-block font-mono text-[11px] uppercase tracking-wider px-2 py-0.5 rounded ${
                             t.status === 'Completed'
                               ? 'bg-[#36C995]/15 text-[#36C995]'
                               : t.status === 'Pending'
@@ -595,7 +595,7 @@ export const DashboardTransactionsPage: React.FC = () => {
             <div className="space-y-6">
               <div className="flex items-center justify-between border-b border-current/10 pb-4">
                 <div>
-                  <span className="text-[10px] font-mono uppercase tracking-widest text-[#B39352] dark:text-[#D6B878] block">
+                  <span className="text-[11px] font-mono uppercase tracking-widest text-[#B39352] dark:text-[#D6B878] block">
                     Transaction Inspection Drawer
                   </span>
                   <h2 className="font-serif text-2xl font-semibold mt-0.5">

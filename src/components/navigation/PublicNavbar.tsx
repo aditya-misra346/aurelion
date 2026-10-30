@@ -107,7 +107,7 @@ export const PublicNavbar: React.FC<PublicNavbarProps> = ({ onOpenCommandPalette
       >
         <div className="flex items-center gap-3">
           <BrandMark size="md" />
-          <span className="hidden xl:inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-[10px] font-mono uppercase tracking-widest bg-[#36C995]/15 text-[#36C995] border border-[#36C995]/30">
+          <span className="hidden xl:inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-[11px] font-mono uppercase tracking-widest bg-[#36C995]/15 text-[#36C995] border border-[#36C995]/30">
             <i className="w-1.5 h-1.5 rounded-full bg-[#36C995]" /> Interactive Demo
           </span>
         </div>
@@ -153,7 +153,7 @@ export const PublicNavbar: React.FC<PublicNavbarProps> = ({ onOpenCommandPalette
                               {item.title}
                             </span>
                             {item.badge && (
-                              <span className="text-[10px] font-mono uppercase tracking-wider px-1.5 py-0.5 rounded bg-[#D6B878]/15 text-[#B39352] dark:text-[#D6B878]">
+                              <span className="text-[11px] font-mono uppercase tracking-wider px-1.5 py-0.5 rounded bg-[#D6B878]/15 text-[#B39352] dark:text-[#D6B878]">
                                 {item.badge}
                               </span>
                             )}
@@ -210,7 +210,7 @@ export const PublicNavbar: React.FC<PublicNavbarProps> = ({ onOpenCommandPalette
             >
               <Search className="w-3.5 h-3.5 text-[#D6B878]" />
               <span>Quick Jump</span>
-              <kbd className="px-1.5 py-0.5 text-[10px] font-mono rounded bg-[#080D18]/5 dark:bg-[#0D1423] border border-current/15">
+              <kbd className="px-1.5 py-0.5 text-[11px] font-mono rounded bg-[#080D18]/5 dark:bg-[#0D1423] border border-current/15">
                 ⌘K
               </kbd>
             </button>

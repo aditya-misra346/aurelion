@@ -184,12 +184,12 @@ export const DashboardLayout: React.FC = () => {
         <div className="p-4 border-t border-[#080D18]/10 dark:border-[#F5F2EA]/10 space-y-3">
           {!sidebarCollapsed && (
             <div className="p-3.5 rounded-xl bg-[#F5F2EA] dark:bg-[#141D2D] border border-[#D6B878]/25 space-y-1">
-              <div className="flex items-center justify-between text-[10px] font-mono uppercase tracking-wider text-[#B39352] dark:text-[#D6B878]">
+              <div className="flex items-center justify-between text-[11px] font-mono uppercase tracking-wider text-[#B39352] dark:text-[#D6B878]">
                 <span>{profile.membershipTier} Client</span>
                 <Sparkles className="w-3 h-3" />
               </div>
               <p className="text-xs font-semibold truncate">{profile.fullName}</p>
-              <p className="text-[11px] text-[#6E7A8E] dark:text-[#929DB0] truncate">
+              <p className="text-xs text-[#6E7A8E] dark:text-[#929DB0] truncate">
                 Advisor: {profile.privateAdvisorName}
               </p>
             </div>
@@ -264,7 +264,7 @@ export const DashboardLayout: React.FC = () => {
               <button
                 type="button"
                 onClick={() => setCmdOpen(true)}
-                className="absolute right-2 px-1.5 py-0.5 text-[10px] font-mono rounded bg-[#F8F5EE] dark:bg-[#0D1423] text-[#9E7B35] dark:text-[#D6B878] border border-current/15 hover:border-[#D6B878]"
+                className="absolute right-2 px-1.5 py-0.5 text-[11px] font-mono rounded bg-[#F8F5EE] dark:bg-[#0D1423] text-[#9E7B35] dark:text-[#D6B878] border border-current/15 hover:border-[#D6B878]"
                 title="Open Command Palette (⌘K)"
               >
                 ⌘K
@@ -273,7 +273,7 @@ export const DashboardLayout: React.FC = () => {
 
             {searchFocused && searchQuery.trim().length > 0 && (
               <div className="absolute left-0 right-0 top-full mt-2 rounded-2xl bg-white dark:bg-[#141D2D] border border-[#D6B878]/30 dark:border-[#D6B878]/30 shadow-luxury-light dark:shadow-luxury p-3 z-50 space-y-2">
-                <div className="flex items-center justify-between px-2 text-[10px] font-mono uppercase tracking-wider text-[#6E7A8E] dark:text-[#929DB0]">
+                <div className="flex items-center justify-between px-2 text-[11px] font-mono uppercase tracking-wider text-[#6E7A8E] dark:text-[#929DB0]">
                   <span>Matching Ledger Records</span>
                   <span>{searchResults.length} found</span>
                 </div>
@@ -295,7 +295,7 @@ export const DashboardLayout: React.FC = () => {
                       >
                         <div className="min-w-0">
                           <p className="text-xs font-semibold truncate">{t.merchant}</p>
-                          <p className="text-[10px] text-[#6E7A8E] dark:text-[#929DB0] truncate">
+                          <p className="text-[11px] text-[#6E7A8E] dark:text-[#929DB0] truncate">
                             {t.date} • {t.category}
                           </p>
                         </div>
@@ -357,7 +357,7 @@ export const DashboardLayout: React.FC = () => {
               >
                 <Bell className="w-4 h-4" />
                 {unreadCount > 0 && (
-                  <span className="absolute -top-1 -right-1 w-4 h-4 rounded-full bg-[#D6B878] text-[#080D18] font-mono text-[10px] font-bold flex items-center justify-center">
+                  <span className="absolute -top-1 -right-1 w-4 h-4 rounded-full bg-[#D6B878] text-[#080D18] font-mono text-[11px] font-bold flex items-center justify-center">
                     {unreadCount}
                   </span>
                 )}
@@ -368,7 +368,7 @@ export const DashboardLayout: React.FC = () => {
                   <div className="p-4 border-b border-current/10 flex items-center justify-between">
                     <div>
                       <h3 className="text-sm font-semibold">Client Alert Center</h3>
-                      <p className="text-[11px] text-[#6E7A8E] dark:text-[#929DB0]">
+                      <p className="text-xs text-[#6E7A8E] dark:text-[#929DB0]">
                         {unreadCount} unread simulated notifications
                       </p>
                     </div>
@@ -413,7 +413,7 @@ export const DashboardLayout: React.FC = () => {
                             <p className="text-xs text-[#4A5568] dark:text-[#929DB0] mt-1 leading-relaxed">
                               {n.message}
                             </p>
-                            <span className="text-[10px] font-mono text-[#6E7A8E] dark:text-[#929DB0] mt-1 block">
+                            <span className="text-[11px] font-mono text-[#6E7A8E] dark:text-[#929DB0] mt-1 block">
                               {n.timestamp} • {n.category}
                             </span>
                           </div>
@@ -568,7 +568,7 @@ export const DashboardLayout: React.FC = () => {
       {/* Persistent Window-Bottom Creator Signature Bar */}
       <div className="fixed bottom-0 left-0 right-0 z-40 h-9 bg-[#FAF8F5]/95 dark:bg-[#080D18]/95 backdrop-blur-md border-t border-[#D6B878]/25 dark:border-[#D6B878]/30 px-4 flex items-center justify-center gap-2 text-xs text-[#0A0F1A] dark:text-[#F5F2EA]">
         <Sparkles className="w-3.5 h-3.5 text-[#9E7B35] dark:text-[#D6B878]" />
-        <span className="font-mono text-[11px] uppercase tracking-[0.18em] text-[#6B778D] dark:text-[#929DB0] hidden sm:inline">
+        <span className="font-mono text-xs uppercase tracking-[0.18em] text-[#6B778D] dark:text-[#929DB0] hidden sm:inline">
           AURELION Client Terminal
         </span>
         <span className="text-[#9E7B35]/50 dark:text-[#D6B878]/50 hidden sm:inline">•</span>

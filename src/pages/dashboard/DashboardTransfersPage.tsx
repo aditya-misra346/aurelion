@@ -253,12 +253,12 @@ export const DashboardTransfersPage: React.FC = () => {
                     >
                       <div className="flex items-center justify-between">
                         <span className="text-xs font-semibold">{rcp.name}</span>
-                        <span className="text-[10px] font-mono px-2 py-0.5 rounded bg-current/10">
+                        <span className="text-[11px] font-mono px-2 py-0.5 rounded bg-current/10">
                           {rcp.tag}
                         </span>
                       </div>
                       <p className="text-xs opacity-70 mt-1">{rcp.bankName}</p>
-                      <p className="font-mono text-[11px] text-[#B39352] dark:text-[#D6B878] mt-1">
+                      <p className="font-mono text-xs text-[#B39352] dark:text-[#D6B878] mt-1">
                         {rcp.accountMasked}
                       </p>
                     </button>
@@ -340,7 +340,7 @@ export const DashboardTransfersPage: React.FC = () => {
                     key={preset}
                     type="button"
                     onClick={() => setAmountInput(String(preset))}
-                    className="px-2.5 py-1 rounded-lg bg-[#F5F2EA] dark:bg-[#0D1423] hover:border-[#D6B878] border border-current/10 font-mono text-[11px]"
+                    className="px-2.5 py-1 rounded-lg bg-[#F5F2EA] dark:bg-[#0D1423] hover:border-[#D6B878] border border-current/10 font-mono text-xs"
                   >
                     ${preset.toLocaleString()}
                   </button>
@@ -392,7 +392,7 @@ export const DashboardTransfersPage: React.FC = () => {
 
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs sm:text-sm">
             <div className="p-4 rounded-2xl bg-[#F5F2EA] dark:bg-[#0D1423] space-y-1">
-              <span className="text-[10px] font-mono uppercase text-[#6E7A8E] dark:text-[#929DB0]">
+              <span className="text-[11px] font-mono uppercase text-[#6E7A8E] dark:text-[#929DB0]">
                 From Source Account
               </span>
               <p className="font-semibold">{sourceAccount.name}</p>
@@ -405,7 +405,7 @@ export const DashboardTransfersPage: React.FC = () => {
             </div>
 
             <div className="p-4 rounded-2xl bg-[#F5F2EA] dark:bg-[#0D1423] space-y-1">
-              <span className="text-[10px] font-mono uppercase text-[#6E7A8E] dark:text-[#929DB0]">
+              <span className="text-[11px] font-mono uppercase text-[#6E7A8E] dark:text-[#929DB0]">
                 To Fictional Counterparty
               </span>
               <p className="font-semibold">{finalRecipientName}</p>

@@ -52,7 +52,7 @@ export const DashboardProfilePage: React.FC = () => {
                 JS
               </div>
               <div>
-                <span className="text-[10px] font-mono uppercase tracking-widest text-[#9E7B35] dark:text-[#D6B878]">
+                <span className="text-[11px] font-mono uppercase tracking-widest text-[#9E7B35] dark:text-[#D6B878]">
                   {profile.membershipTier} Client Tier
                 </span>
                 <h2 className="font-serif text-2xl font-semibold">{profile.fullName}</h2>
@@ -73,7 +73,7 @@ export const DashboardProfilePage: React.FC = () => {
           </div>
 
           <div className="rounded-3xl p-6 bg-white dark:bg-[#141D2D] border border-[#080D18]/10 dark:border-[#F5F2EA]/10 space-y-3">
-            <span className="text-[10px] font-mono uppercase tracking-widest text-[#B39352] dark:text-[#D6B878]">
+            <span className="text-[11px] font-mono uppercase tracking-widest text-[#B39352] dark:text-[#D6B878]">
               Assigned Private Desk (Fictional)
             </span>
             <h3 className="font-serif text-xl font-semibold">{profile.privateAdvisorName}</h3>
