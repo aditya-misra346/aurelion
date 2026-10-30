@@ -369,8 +369,8 @@ export const HomePage: React.FC = () => {
               key={tier.name}
               className={`rounded-3xl p-6 flex flex-col justify-between border transition-all ${
                 tier.featured
-                  ? 'bg-[#0D1423] text-[#F5F2EA] border-[#D6B878]/50 shadow-luxury'
-                  : 'bg-white dark:bg-[#141D2D] border-[#080D18]/10 dark:border-[#F5F2EA]/10'
+                  ? 'bg-gradient-to-br from-[#FFFFFF] via-[#FDFBF7] to-[#F5EFE4] text-[#0A0F1A] border-[#D6B878] shadow-luxury-light ring-1 ring-[#D6B878]/35 dark:ring-0 dark:bg-[#0D1423] dark:text-[#F5F2EA] dark:border-[#D6B878]/50 dark:shadow-luxury'
+                  : 'bg-white dark:bg-[#141D2D] border-[#0A0F1A]/10 dark:border-[#F5F2EA]/10 shadow-sm dark:shadow-none'
               }`}
             >
               <div className="space-y-4">
@@ -425,7 +425,7 @@ export const HomePage: React.FC = () => {
                 className={`mt-5 py-2.5 px-4 rounded-xl text-center text-xs font-semibold transition-all inline-flex items-center justify-center gap-1.5 ${
                   tier.featured
                     ? 'bg-[#D6B878] hover:bg-[#E5CFA0] text-[#080D18]'
-                    : 'bg-[#080D18] dark:bg-[#1B273D] text-[#F5F2EA] border border-[#D6B878]/30'
+                    : 'bg-[#F4EFE6] hover:bg-[#EAE4D8] dark:bg-[#1B273D] dark:hover:bg-[#253654] text-[#0A0F1A] dark:text-[#F5F2EA] border border-[#D6B878]/35 dark:border-[#D6B878]/30'
                 }`}
               >
                 <span>Compare {tier.name}</span>
@@ -509,7 +509,7 @@ export const HomePage: React.FC = () => {
           </div>
 
           {/* Right 5 Cols: Interactive Security Posture Card */}
-          <div className="lg:col-span-5 rounded-3xl bg-[#0D1423] text-[#F5F2EA] border border-[#D6B878]/30 p-6 flex flex-col justify-between space-y-5">
+          <div className="lg:col-span-5 rounded-3xl bg-gradient-to-br from-[#FFFFFF] via-[#FDFBF7] to-[#F5EFE4] dark:bg-[#0D1423] text-[#0A0F1A] dark:text-[#F5F2EA] border border-[#D6B878]/35 dark:border-[#D6B878]/30 shadow-luxury-light dark:shadow-none p-6 flex flex-col justify-between space-y-5">
             <div className="flex items-center justify-between gap-4">
               <div>
                 <span className="text-[10px] font-mono uppercase tracking-widest text-[#36C995] block">
@@ -518,7 +518,7 @@ export const HomePage: React.FC = () => {
                 <h3 className="font-serif text-2xl font-semibold mt-0.5">
                   Defense Controls
                 </h3>
-                <p className="text-xs text-[#929DB0]">
+                <p className="text-xs text-[#6B778D] dark:text-[#929DB0]">
                   Toggle shields to test posture score
                 </p>
               </div>
@@ -552,12 +552,12 @@ export const HomePage: React.FC = () => {
                     }
                     className={`p-3 rounded-xl border text-left transition-all flex items-center justify-between gap-2 ${
                       active
-                        ? 'bg-[#141D2D] border-[#36C995]/40'
-                        : 'bg-[#141D2D]/40 border-[#F5F2EA]/10 opacity-60'
+                        ? 'bg-white dark:bg-[#141D2D] border-[#36C995]/50 shadow-sm'
+                        : 'bg-[#F4EFE6]/70 dark:bg-[#141D2D]/40 border-[#0A0F1A]/10 dark:border-[#F5F2EA]/10 opacity-75'
                     }`}
                   >
                     <span className="flex items-center gap-2 text-xs font-medium">
-                      <Icon className="w-3.5 h-3.5 text-[#D6B878]" />
+                      <Icon className="w-3.5 h-3.5 text-[#9E7B35] dark:text-[#D6B878]" />
                       <span>{ctrl.label}</span>
                     </span>
                     <span
