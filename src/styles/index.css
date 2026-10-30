@@ -86,10 +86,12 @@
 /* 3D card perspective utilities */
 .perspective-1000 {
   perspective: 1200px;
+  -webkit-perspective: 1200px;
 }
 
 .preserve-3d {
   transform-style: preserve-3d;
+  -webkit-transform-style: preserve-3d;
 }
 
 .backface-hidden {
@@ -99,6 +101,7 @@
 
 .rotate-y-180 {
   transform: rotateY(180deg);
+  -webkit-transform: rotateY(180deg);
 }
 
 @media (prefers-reduced-motion: reduce) {
