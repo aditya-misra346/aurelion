@@ -1,5 +1,9 @@
 # AURELION — Private & Digital Banking Experience
 
+**Live Production:** [https://aurelion-orcin.vercel.app](https://aurelion-orcin.vercel.app)  
+**GitHub Repository:** [https://github.com/aditya-misra346/aurelion](https://github.com/aditya-misra346/aurelion)  
+**Author:** Made by Aditya Misra
+
 **Tagline:** *"Banking, Beyond Ordinary."*
 
 AURELION is a luxury-grade, interactive digital banking web application crafted with React 18, TypeScript, Tailwind CSS, Recharts, and Lucide Icons.
