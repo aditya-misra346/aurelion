@@ -46,7 +46,7 @@ export const DashboardProfilePage: React.FC = () => {
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-8">
         {/* Left 5 Cols: Client Crest & Advisor Card */}
         <div className="lg:col-span-5 space-y-6">
-          <div className="rounded-3xl p-6 bg-gradient-to-br from-[#FFFFFF] via-[#FDFBF7] to-[#F5EFE4] dark:bg-[#0D1423] text-[#0A0F1A] dark:text-[#F5F2EA] border border-[#D6B878]/35 shadow-luxury-light dark:shadow-none space-y-5">
+          <div className="rounded-3xl p-6 bg-pearl-card dark:bg-none dark:bg-[#0D1423] text-[#0A0F1A] dark:text-[#F5F2EA] border border-[#D6B878]/35 shadow-luxury-light dark:shadow-none space-y-5">
             <div className="flex items-center gap-4">
               <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-[#E5CFA0] to-[#B39352] text-[#080D18] font-serif font-bold text-2xl flex items-center justify-center shadow-sm">
                 JS

@@ -180,7 +180,7 @@ export const DashboardOverviewPage: React.FC = () => {
       {/* Primary KPI Strip with Visual Sparklines & Radial Gauge */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4">
         {/* Total Available Liquidity */}
-        <div className="sm:col-span-2 lg:col-span-2 rounded-2xl p-6 bg-gradient-to-br from-[#FFFFFF] via-[#FDFBF7] to-[#F5EFE4] dark:bg-[#0D1423] text-[#0A0F1A] dark:text-[#F5F2EA] border border-[#D6B878]/40 dark:border-[#D6B878]/35 shadow-luxury-light dark:shadow-luxury flex items-center justify-between gap-4">
+        <div className="sm:col-span-2 lg:col-span-2 rounded-2xl p-6 bg-pearl-card dark:bg-none dark:bg-[#0D1423] text-[#0A0F1A] dark:text-[#F5F2EA] border border-[#D6B878]/40 dark:border-[#D6B878]/35 shadow-luxury-light dark:shadow-luxury flex items-center justify-between gap-4">
           <div className="space-y-2">
             <span className="text-xs font-mono uppercase tracking-[0.18em] text-[#9E7B35] dark:text-[#D6B878] inline-flex items-center">
               Total Available Liquidity
