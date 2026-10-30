@@ -95,7 +95,7 @@ export const PublicNavbar: React.FC<PublicNavbarProps> = ({ onOpenCommandPalette
 
   return (
     <header
-      className={`sticky top-0 z-50 w-full transition-all duration-300 ${
+      className={`public-navbar sticky top-0 z-50 w-full transition-all duration-300 ${
         scrolled
           ? 'bg-[#F5F2EA]/90 dark:bg-[#080D18]/90 backdrop-blur-xl border-b border-[#080D18]/10 dark:border-[#F5F2EA]/10 shadow-sm'
           : 'bg-transparent border-b border-transparent'
@@ -107,7 +107,7 @@ export const PublicNavbar: React.FC<PublicNavbarProps> = ({ onOpenCommandPalette
       >
         <div className="flex items-center gap-3">
           <BrandMark size="md" />
-          <span className="hidden xl:inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-[11px] font-mono uppercase tracking-widest bg-[#36C995]/15 text-[#36C995] border border-[#36C995]/30">
+          <span className="hidden xl:inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-[10px] font-mono uppercase tracking-widest bg-[#36C995]/15 text-[#36C995] border border-[#36C995]/30">
             <i className="w-1.5 h-1.5 rounded-full bg-[#36C995]" /> Interactive Demo
           </span>
         </div>
