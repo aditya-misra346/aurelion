@@ -272,7 +272,7 @@ export const PublicNavbar: React.FC<PublicNavbarProps> = ({ onOpenCommandPalette
 
       {/* Mobile Drawer */}
       {mobileOpen && (
-        <div className="lg:hidden bg-[#F5F2EA] dark:bg-[#0D1423] border-b border-[#080D18]/10 dark:border-[#F5F2EA]/10 px-4 pt-3 pb-6 space-y-4 animate-in slide-in-from-top-2">
+        <div className="lg:hidden bg-[#F5F2EA] dark:bg-[#0D1423] border-b border-[#080D18]/10 dark:border-[#F5F2EA]/10 px-4 pt-3 pb-6 space-y-4 animate-in fade-in slide-in-from-top-2 duration-200 ease-out">
           <div className="grid grid-cols-2 gap-1.5">
             {[
               { label: 'Personal Banking', to: '/personal-banking' },
