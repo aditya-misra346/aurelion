@@ -30,8 +30,9 @@ export default {
       },
       boxShadow: {
         'luxury': '0 24px 60px -15px rgba(0, 0, 0, 0.65), 0 0 1px 1px rgba(214, 184, 120, 0.14)',
-        'luxury-light': '0 20px 50px -15px rgba(8, 13, 24, 0.08), 0 0 1px 1px rgba(8, 13, 24, 0.06)',
+        'luxury-light': '0 16px 40px -12px rgba(10, 15, 26, 0.07), 0 0 0 1px rgba(179, 147, 82, 0.18)',
         'gold-glow': '0 0 32px -6px rgba(214, 184, 120, 0.25)',
+        'gold-glow-light': '0 0 32px -4px rgba(179, 147, 82, 0.22)',
       },
       backgroundImage: {
         'radial-gold': 'radial-gradient(circle at 50% 0%, rgba(214, 184, 120, 0.12) 0%, transparent 70%)',
