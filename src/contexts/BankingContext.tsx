@@ -138,9 +138,15 @@ export const BankingProvider: React.FC<{ children: React.ReactNode }> = ({ child
   const [recurringPayments, setRecurringPayments] = useState<RecurringPayment[]>(initial.recurring);
   const [notifications, setNotifications] = useState<NotificationItem[]>(initial.notifications);
   const [profile, setProfile] = useState<UserProfile>(initial.profile);
+  const isMountedRef = React.useRef(false);
 
   useEffect(() => {
     const root = document.documentElement;
+
+    if (isMountedRef.current) {
+      root.classList.add('theme-transitioning');
+    }
+
     if (theme === 'dark') {
       root.classList.add('dark');
       root.classList.remove('light');
@@ -149,6 +155,15 @@ export const BankingProvider: React.FC<{ children: React.ReactNode }> = ({ child
       root.classList.remove('dark');
     }
     localStorage.setItem('aurelion_theme', theme);
+
+    if (isMountedRef.current) {
+      const timer = window.setTimeout(() => {
+        root.classList.remove('theme-transitioning');
+      }, 380);
+      return () => window.clearTimeout(timer);
+    } else {
+      isMountedRef.current = true;
+    }
   }, [theme]);
 
   useEffect(() => {
