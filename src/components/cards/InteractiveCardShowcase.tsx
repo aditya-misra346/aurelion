@@ -28,7 +28,6 @@ export const InteractiveCardShowcase: React.FC = () => {
   const [selectedIndex, setSelectedIndex] = useState(0);
   const [isFlipped, setIsFlipped] = useState(false);
   const [revealNumbers, setRevealNumbers] = useState(false);
-  const [cardScale, setCardScale] = useState<'sm' | 'md' | 'lg'>('md');
   const [studioLightOverride, setStudioLightOverride] = useState<'dark' | 'light' | null>(null);
 
   // Sync studio stage light mode with website theme changes
@@ -77,7 +76,7 @@ export const InteractiveCardShowcase: React.FC = () => {
             3D Card Studio
           </span>
 
-          <div className="flex flex-wrap items-center gap-2">
+          <div className="flex items-center gap-2">
             <button
               type="button"
               onClick={() => setIsFlipped((prev) => !prev)}
@@ -116,33 +115,6 @@ export const InteractiveCardShowcase: React.FC = () => {
               <span>{revealNumbers ? 'Mask' : 'Reveal'}</span>
             </button>
 
-            <div
-              className={`inline-flex items-center rounded-lg border p-0.5 text-xs ${
-                isDark
-                  ? 'border-current/15'
-                  : 'bg-[#EAE2D2]/90 border-[#0A0F1A]/12 shadow-inner'
-              }`}
-              role="group"
-              aria-label="Card preview scale"
-            >
-              {(['sm', 'md', 'lg'] as const).map((sz) => (
-                <button
-                  key={sz}
-                  type="button"
-                  onClick={() => setCardScale(sz)}
-                  className={`px-2 py-1 rounded-md uppercase font-mono text-[10px] transition-colors ${
-                    cardScale === sz
-                      ? 'bg-[#D6B878] text-[#080D18] font-semibold shadow-xs'
-                      : isDark
-                      ? 'opacity-70 hover:opacity-100'
-                      : 'text-[#5A6578] hover:text-[#0A0F1A] font-medium'
-                  }`}
-                >
-                  {sz}
-                </button>
-              ))}
-            </div>
-
             <button
               type="button"
               onClick={() =>
@@ -165,7 +137,7 @@ export const InteractiveCardShowcase: React.FC = () => {
         </div>
 
         {/* Center Card Stage */}
-        <div className="relative z-10 my-8 sm:my-10 flex flex-col items-center justify-center min-h-[240px]">
+        <div className="relative z-10 my-8 sm:my-10 flex flex-col items-center justify-center min-h-[260px] sm:min-h-[290px]">
           <PhysicalCardPreview
             variant={activeCard.variantId}
             cardholderName={activeCard.cardholderName}
@@ -176,7 +148,7 @@ export const InteractiveCardShowcase: React.FC = () => {
             network={activeCard.network}
             isFlipped={isFlipped}
             revealNumbers={revealNumbers}
-            scale={cardScale}
+            scale="lg"
             onClick={() => setIsFlipped((prev) => !prev)}
           />
         </div>
