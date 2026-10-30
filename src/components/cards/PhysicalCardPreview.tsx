@@ -134,10 +134,16 @@ export const PhysicalCardPreview: React.FC<PhysicalCardPreviewProps> = ({
       onMouseMove={handleMouseMove}
       onMouseLeave={handleMouseLeave}
       onClick={onClick}
+      style={{
+        perspective: '1200px',
+        WebkitPerspective: '1200px',
+      }}
     >
       <div
         className="relative w-full h-full rounded-2xl transition-transform duration-500 preserve-3d shadow-luxury"
         style={{
+          transformStyle: 'preserve-3d',
+          WebkitTransformStyle: 'preserve-3d',
           transform: `rotateX(${tilt.rotateX}deg) rotateY(${
             (isFlipped ? 180 : 0) + tilt.rotateY
           }deg)`,
@@ -145,17 +151,28 @@ export const PhysicalCardPreview: React.FC<PhysicalCardPreviewProps> = ({
       >
         {/* FRONT OF CARD */}
         <div
-          className={`absolute inset-0 w-full h-full rounded-2xl p-6 flex flex-col justify-between backface-hidden border ${style.frontBg} ${style.border} overflow-hidden`}
+          className={`absolute inset-0 w-full h-full rounded-2xl p-6 flex flex-col justify-between backface-hidden border ${style.frontBg} ${style.border}`}
+          style={{
+            transform: 'rotateY(0deg) translateZ(1px)',
+            WebkitTransform: 'rotateY(0deg) translateZ(1px)',
+            backfaceVisibility: 'hidden',
+            WebkitBackfaceVisibility: 'hidden',
+            transformStyle: 'preserve-3d',
+            WebkitTransformStyle: 'preserve-3d',
+          }}
         >
           {/* Subtle architectural engraving rings */}
           <div
-            className="absolute -right-16 -bottom-16 w-64 h-64 rounded-full border border-current opacity-[0.06] pointer-events-none"
+            className="absolute inset-0 rounded-2xl overflow-hidden pointer-events-none"
             aria-hidden="true"
-          />
-          <div
-            className="absolute -right-8 -bottom-8 w-48 h-48 rounded-full border border-current opacity-[0.06] pointer-events-none"
-            aria-hidden="true"
-          />
+          >
+            <div
+              className="absolute -right-16 -bottom-16 w-64 h-64 rounded-full border border-current opacity-[0.06]"
+            />
+            <div
+              className="absolute -right-8 -bottom-8 w-48 h-48 rounded-full border border-current opacity-[0.06]"
+            />
+          </div>
 
           {/* Top Row: Brand & Tier */}
           <div className="relative z-10 flex items-start justify-between gap-2">
@@ -255,13 +272,29 @@ export const PhysicalCardPreview: React.FC<PhysicalCardPreviewProps> = ({
 
         {/* REVERSE SIDE OF CARD */}
         <div
-          className={`absolute inset-0 w-full h-full rounded-2xl flex flex-col justify-between backface-hidden rotate-y-180 border ${style.backBg} ${style.border} overflow-hidden`}
+          className={`absolute inset-0 w-full h-full rounded-2xl flex flex-col justify-between backface-hidden rotate-y-180 border ${style.backBg} ${style.border}`}
+          style={{
+            transform: 'rotateY(180deg) translateZ(1px)',
+            WebkitTransform: 'rotateY(180deg) translateZ(1px)',
+            backfaceVisibility: 'hidden',
+            WebkitBackfaceVisibility: 'hidden',
+            transformStyle: 'preserve-3d',
+            WebkitTransformStyle: 'preserve-3d',
+          }}
         >
-          {/* Magnetic Stripe */}
-          <div className="w-full h-11 bg-[#05070C] mt-5 opacity-90" />
+          {/* Magnetic Stripe container */}
+          <div
+            className="absolute inset-0 rounded-2xl overflow-hidden pointer-events-none"
+            aria-hidden="true"
+          >
+            <div className="w-full h-11 bg-[#05070C] mt-5 opacity-90" />
+          </div>
+
+          {/* Spacer for layout */}
+          <div className="w-full h-11 mt-5 pointer-events-none invisible" aria-hidden="true" />
 
           {/* Signature & Fictional Security Code */}
-          <div className="px-6 my-auto space-y-3">
+          <div className="relative z-10 px-6 my-auto space-y-3">
             <div className="flex items-center gap-3">
               <div className="flex-1 h-8 rounded bg-white/15 backdrop-blur-sm border border-white/20 px-3 flex items-center justify-between">
                 <span className="font-serif italic text-xs tracking-wider opacity-75 text-white">
@@ -284,7 +317,7 @@ export const PhysicalCardPreview: React.FC<PhysicalCardPreviewProps> = ({
           </div>
 
           {/* Bottom Reverse Metadata */}
-          <div className="px-6 pb-5 flex items-center justify-between text-[10px]">
+          <div className="relative z-10 px-6 pb-5 flex items-center justify-between text-[10px]">
             <span className={`font-mono ${style.textSecondary}`}>
               ID: AURL-{lastFour}-SIM
             </span>
