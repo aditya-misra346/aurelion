@@ -31,7 +31,7 @@ while true; do
       log_msg "Detected $CHANGED_COUNT changed file(s). Creating commit..."
 
       git add -A
-      git commit -m "chore(auto-sync): update $CHANGED_COUNT file(s) [skip ci]" >> "$LOG_FILE" 2>&1 || true
+      git commit -m "chore(auto-sync): update $CHANGED_COUNT file(s)" >> "$LOG_FILE" 2>&1 || true
 
       if git remote get-url origin >/dev/null 2>&1; then
         log_msg "Pushing commit to GitHub (origin/main)..."
