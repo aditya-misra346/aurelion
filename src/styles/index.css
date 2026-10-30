@@ -43,14 +43,26 @@
     background-color: var(--bg-primary);
     color: var(--text-primary);
     -webkit-text-size-adjust: 100%;
+    text-rendering: optimizeLegibility;
   }
 
   body {
     background-color: var(--bg-primary);
     color: var(--text-primary);
+    font-size: 1.0625rem;
+    line-height: 1.6875rem;
     overflow-x: hidden;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+  }
+
+  /* Balanced heading and paragraph typography */
+  h1, h2, h3, h4, h5, h6 {
+    text-wrap: balance;
+  }
+
+  p {
+    text-wrap: pretty;
   }
 
   /* Optimize touch responsiveness and eliminate mobile tap latency */
