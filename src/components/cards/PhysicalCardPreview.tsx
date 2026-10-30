@@ -104,7 +104,7 @@ export const PhysicalCardPreview: React.FC<PhysicalCardPreviewProps> = ({
   const isSm = scale === 'sm';
 
   const scaleClasses = {
-    sm: 'w-[290px] max-w-full aspect-[1.586/1]',
+    sm: 'w-full max-w-[290px] aspect-[1.586/1]',
     md: 'w-full max-w-[380px] aspect-[1.586/1]',
     lg: 'w-full max-w-[430px] aspect-[1.586/1]',
   };
